@@ -1,32 +1,25 @@
 {% extends "base.html" %}
-{% set crumbs = [{ name: 'Клейкая лента', url: '/adhesive/' }] %}
 {% block title %}Клейкая лента — Рафа{% endblock %}
-{% block description %}Клейкая лента упаковочная, с логотипом, со специальными надписями. Производство, доставка.{% endblock %}
-{% block breadcrumbs %}{% include "macros/breadcrumbs.html" %}{% endblock %}
-{% block content %}
+{% block description %}Клейкая лента упаковочная, с логотипом, со спец. надписями{% endblock %}
+{% block breadcrumbs %}
 <div class="breadcrumbs"><a href="/">Главная</a><span class="sep">•</span><a href="/catalog/">Каталог</a><span class="sep">•</span><span>Клейкая лента</span></div>
-    <h1 class="page-title">Клейкая лента</h1>
-    <div class="catalog-layout">
-      <aside class="sidebar">
-        <div class="sidebar-title">Категории</div>
-        <ul>
-          <li><a href="/catalog/strapping-pp-tape/">Упаковочные стреппинг-ленты</a></li>
-          <li><a href="/catalog/adhesive-tape/" class="active">Клейкая лента</a>
-            <ul>
-              <li><a href="/catalog/adhesive-tape/adhesive-tape-packing/">Клейкая лента упаковочная</a></li>
-              <li><a href="/catalog/adhesive-tape/adhesive-tape-with-logo/">Клейкая лента с логотипом</a></li>
-              <li><a href="/catalog/adhesive-tape/adhesive-tape-with-special-inscriptions/">Лента со спец. надписями</a></li>
-              <li><a href="/catalog/packaging-tools/tools-for-adhesive-tapes-2/">Инструменты для клейких лент</a></li>
-            </ul>
-          </li>
-          <li><a href="/catalog/packaging-tools/">Упаковочные инструменты</a></li>
-          <li><a href="/catalog/special-tapes/">Специальные ленты</a></li>
-          <li><a href="/catalog/stretch-film/">Стрейч пленка</a></li>
-          <li><a href="/catalog/cardboard-sleeve/">Гильза картонная</a></li>
-        </ul>
-      </aside>
-      <div class="products-grid">
-        <div class="cat-card">
-          <div class="cat-card-img"><img src="/img/cat-adhesive.jpg" alt="Клейкая лента упаковочная"></div>
-          <div class="cat-card-body"><h3>Клейкая лента упаковочная</h3><p>Скотч на основе БОПП для заклеивания и герметизации гофрокоробов. Нова Ролл 203-208.</p><a href="/catalog/adhesive-tape/adhesive-tape-packing/">Смотреть →</a>
+{% endblock %}
+{% block content %}
+<h1 class="page-title">Клейкая лента</h1><div class="catalog-layout"><aside class="sidebar"><div class="sidebar-title">Категории</div><ul>
+<li><a href="/catalog/strapping-pp-tape/" >Упаковочные стреппинг-ленты</a></li>
+<li><a href="/catalog/adhesive-tape/" class="active">Клейкая лента</a><ul>
+  <li><a href="/catalog/adhesive-tape/adhesive-tape-packing/">Упаковочная</a></li>
+  <li><a href="/catalog/adhesive-tape/adhesive-tape-with-logo/">С логотипом</a></li>
+  <li><a href="/catalog/adhesive-tape/adhesive-tape-with-special-inscriptions/">Со спец. надписями</a></li>
+</ul></li>
+<li><a href="/catalog/packaging-tools/" >Упаковочные инструменты</a></li>
+<li><a href="/catalog/special-tapes/" >Специальные ленты</a></li>
+<li><a href="/catalog/stretch-film/" >Стрейч пленка</a></li>
+<li><a href="/catalog/cardboard-sleeve/" >Гильза картонная</a></li>
+</ul></aside>
+  <div class="products-grid">
+    <div class="cat-card"><div class="cat-card-img"><img src="/img/cat-adhesive.jpg" alt="Упаковочная"></div><div class="cat-card-body"><h3>Клейкая лента упаковочная</h3><p>Скотч на основе БОПП для заклеивания гофрокоробов. Нова Ролл 203-208.</p><a href="/catalog/adhesive-tape/adhesive-tape-packing/">Смотреть →</a></div></div>
+    <div class="cat-card"><div class="cat-card-img"><img src="/img/cat-adhesive.jpg" alt="С логотипом"></div><div class="cat-card-body"><h3>Клейкая лента с логотипом</h3><p>Флексографическая печать. От 1 до 3 цветов. От 56 руб.</p><a href="/catalog/adhesive-tape/adhesive-tape-with-logo/">Смотреть →</a></div></div>
+    <div class="cat-card"><div class="cat-card-img"><img src="/img/cat-adhesive.jpg" alt="Спец. надписи"></div><div class="cat-card-body"><h3>Клейкая лента со спец. надписями</h3><p>«Акция», «Подарок», «Осторожно» и др. 23 вида.</p><a href="/catalog/adhesive-tape/adhesive-tape-with-special-inscriptions/">Смотреть →</a></div></div>
+  </div></div>
 {% endblock %}

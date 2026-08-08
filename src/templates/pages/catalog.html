@@ -1,13 +1,17 @@
 {% extends "base.html" %}
-{% set crumbs = [{ name: 'Каталог продукции', url: '/catalog/' }] %}
 {% block title %}Каталог продукции — Рафа{% endblock %}
-{% block description %}Каталог упаковочных материалов: стреппинг-ленты, клейкая лента, инструменты.{% endblock %}
-{% block breadcrumbs %}{% include "macros/breadcrumbs.html" %}{% endblock %}
+{% block description %}Каталог упаковочных материалов{% endblock %}
+{% block breadcrumbs %}
+<div class="breadcrumbs"><a href="/">Главная</a><span class="sep">•</span><span>Каталог продукции</span></div>
+{% endblock %}
 {% block content %}
 <h1 class="page-title">Каталог продукции</h1>
 <div class="cat-grid">
-  {% for cat in catalog.full %}
-  <div class="cat-card"><div class="cat-card-img"><img src="/img/cat-{{ cat.img | default('strapping.jpg') }}" alt="{{ cat.name }}"></div><div class="cat-card-body"><h3>{{ cat.name }}</h3><a href="{{ cat.url }}">Смотреть →</a></div></div>
-  {% endfor %}
+  <div class="cat-card"><div class="cat-card-img"><img src="/img/cat-strapping.jpg" alt="Стреппинг-ленты"></div><div class="cat-card-body"><h3>Упаковочные стреппинг-ленты</h3><p>Полипропиленовая лента для обвязки, стягивания и паллетирования грузов.</p><a href="/catalog/strapping-pp-tape/">Смотреть →</a></div></div>
+  <div class="cat-card"><div class="cat-card-img"><img src="/img/cat-adhesive.jpg" alt="Клейкая лента"></div><div class="cat-card-body"><h3>Клейкая лента</h3><p>Клейкая лента упаковочная, с логотипом, со специальными надписями.</p><a href="/catalog/adhesive-tape/">Смотреть →</a></div></div>
+  <div class="cat-card"><div class="cat-card-img"><img src="/img/cat-tools.jpg" alt="Инструменты"></div><div class="cat-card-body"><h3>Упаковочные инструменты</h3><p>Инструменты для стрепп-лент, клещи, скрепа упаковочная.</p><a href="/catalog/packaging-tools/">Смотреть →</a></div></div>
+  <div class="cat-card"><div class="cat-card-img"><img src="/img/cat-special.jpg" alt="Специальные ленты"></div><div class="cat-card-body"><h3>Специальные ленты</h3><p>Изолента на основе флиса, малярная лента, двусторонняя лента.</p><a href="/catalog/special-tapes/">Смотреть →</a></div></div>
+  <div class="cat-card"><div class="cat-card-img"><img src="/img/cat-stretch.jpg" alt="Стрейч пленка"></div><div class="cat-card-body"><h3>Стрейч пленка</h3><p>Растягивающаяся полиэтиленовая плёнка для упаковки паллет.</p><a href="/catalog/stretch-film/">Смотреть →</a></div></div>
+  <div class="cat-card"><div class="cat-card-img"><img src="/img/cat-sleeve.jpg" alt="Гильза картонная"></div><div class="cat-card-body"><h3>Гильза картонная</h3><p>Картонные шпули для намотки рулонных материалов. ∅50-406 мм.</p><a href="/catalog/cardboard-sleeve/">Смотреть →</a></div></div>
 </div>
 {% endblock %}

@@ -1,11 +1,19 @@
 {% extends "base.html" %}
-{% set crumbs = [{ name: 'Клейкая лента со специальными надписями', url: '/adhesive-insc/' }] %}
 {% block title %}Клейкая лента со специальными надписями — Рафа{% endblock %}
 {% block description %}Клейкая лента со специальными надписями: Акция, Подарок, Осторожно хрупкое, Манипуляционные знаки и др.{% endblock %}
-{% block breadcrumbs %}{% include "macros/breadcrumbs.html" %}{% endblock %}
-{% block content %}
+{% block breadcrumbs %}
 <div class="breadcrumbs"><a href="/">Главная</a><span class="sep">•</span><a href="/catalog/">Каталог</a><span class="sep">•</span><a href="/catalog/adhesive-tape/">Клейкая лента</a><span class="sep">•</span><span>Лента со специальными надписями</span></div>
-    <h1 class="page-title">Клейкая лента со специальными надписями</h1>
+{% endblock %}
+{% block content %}
+<div class="breadcrumbs">
+  <a href="/">Главная</a>
+  
+  <span class="sep">•</span>
+  <span>Клейкая лента со специальными надписями</span>
+  
+</div>
+      
+<h1 class="page-title">Клейкая лента со специальными надписями</h1>
     <div class="catalog-layout">
       <aside class="sidebar">
         <div class="sidebar-title">Категории</div>

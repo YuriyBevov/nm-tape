@@ -1,14 +1,9 @@
 {% extends "base.html" %}
-{% set crumbs = [{ name: 'Контакты', url: '/contacts/' }] %}
-{% block title %}Контакты — НМ-Скотч{% endblock %}
-{% block description %}Контакты компании НМ-Скотч. Адреса складов в Москве, СПб, Саранске. Телефоны, email.{% endblock %}
-{% block breadcrumbs %}{% include "macros/breadcrumbs.html" %}{% endblock %}
-{% block content %}
+{% block title %}Контакты — Рафа{% endblock %}
+{% block description %}Контакты{% endblock %}
+{% block breadcrumbs %}
 <div class="breadcrumbs"><a href="/">Главная</a><span class="sep">•</span><span>Контакты</span></div>
-      <h1 class="page-title">Контакты</h1>
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:30px;margin-bottom:40px">
-        <div style="background:var(--light);border-radius:8px;padding:24px"><h3 style="color:var(--primary);margin-bottom:12px">МОСКВА</h3><p>г. Москва, ул. Примерная, д. 1</p><p style="margin-top:8px"><strong>Тел.:</strong> <a href="tel:+74952814155" style="color:var(--primary);font-weight:600">+7 (495) 000-00-01</a></p><p style="margin-top:8px">Менеджер<br><a href="mailto:info@mokami.ru" style="color:var(--primary)">info@mokami.ru</a></p></div>
-        <div style="background:var(--light);border-radius:8px;padding:24px"><h3 style="color:var(--primary);margin-bottom:12px">САНКТ-ПЕТЕРБУРГ</h3><p>г. Санкт-Петербург, ул. Примерная, д. 2</p><p style="margin-top:8px">Менеджер<br><strong>Тел.:</strong> <a href="tel:+78122509826" style="color:var(--primary);font-weight:600">+7 (812) 000-00-02</a><br><a href="mailto:info@mokami.ru" style="color:var(--primary)">info@mokami.ru</a></p></div>
-        <div style="background:var(--light);border-radius:8px;padding:24px"><h3 style="color:var(--primary);margin-bottom:12px">РЕГИОНЫ</h3><p>г. Саранск, ул. Примерная, д. 3</p><p style="margin-top:8px"><strong>Тел.:</strong> <a href="tel:+74951650657" style="color:var(--primary);font-weight:600">+7 (495) 000-00-03</a></p><p style="margin-top:8px;font-size:13px">Менеджер-лента, скрепа, пряжка<br>Менеджер<br>Менеджер<br>Менеджер<br>Менеджер<br>Менеджер</p></div>
-        <div style="background:var(--light);border-radius:8px;padding:24px"><h3 style="color:var(--primary);margin-bottom:12px">Email</h3><p><a href="mailto:info@mokami.ru</a></p><p style="margin-top:10px;font-size:14px;color:var(--muted)">Реквизиты компании — по запросу</p>
+{% endblock %}
+{% block content %}
+<h1 class="page-title">Контакты</h1><div style="display:grid;grid-template-columns:1fr 1fr;gap:30px;margin-bottom:40px"><div style="background:var(--light);border-radius:8px;padding:24px"><h3 style="color:var(--primary);margin-bottom:12px">МОСКВА</h3><p>г. Москва, ул. Примерная, д. 1</p><p style="margin-top:8px"><strong>Тел.:</strong> <a href="tel:+74950000001" style="color:var(--primary);font-weight:600">+7 (495) 000-00-01</a></p><p style="margin-top:8px"><a href="mailto:info@mokami.ru">info@mokami.ru</a></p></div><div style="background:var(--light);border-radius:8px;padding:24px"><h3 style="color:var(--primary);margin-bottom:12px">САНКТ-ПЕТЕРБУРГ</h3><p>г. Санкт-Петербург, ул. Примерная, д. 2</p><p style="margin-top:8px"><strong>Тел.:</strong> <a href="tel:+78120000002" style="color:var(--primary);font-weight:600">+7 (812) 000-00-02</a></p><p style="margin-top:8px"><a href="mailto:info@mokami.ru">info@mokami.ru</a></p></div><div style="background:var(--light);border-radius:8px;padding:24px"><h3 style="color:var(--primary);margin-bottom:12px">РЕГИОНЫ</h3><p>г. Саранск, ул. Примерная, д. 3</p><p style="margin-top:8px"><strong>Тел.:</strong> <a href="tel:+74950000003" style="color:var(--primary);font-weight:600">+7 (495) 000-00-03</a></p></div></div>
 {% endblock %}

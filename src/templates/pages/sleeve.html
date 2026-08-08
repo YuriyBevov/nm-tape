@@ -1,11 +1,19 @@
 {% extends "base.html" %}
-{% set crumbs = [{ name: 'Гильза картонная, шпуля картонная', url: '/sleeve/' }] %}
 {% block title %}Гильза картонная, шпуля картонная — Рафа{% endblock %}
 {% block description %}Производство картонных гильз (втулок, шпуль) для намотки рулонных материалов. Диаметр 50-406 мм.{% endblock %}
-{% block breadcrumbs %}{% include "macros/breadcrumbs.html" %}{% endblock %}
-{% block content %}
+{% block breadcrumbs %}
 <div class="breadcrumbs"><a href="/">Главная</a><span class="sep">•</span><a href="/catalog/">Каталог</a><span class="sep">•</span><span>Гильза картонная</span></div>
-    <h1 class="page-title">Гильза картонная</h1>
+{% endblock %}
+{% block content %}
+<div class="breadcrumbs">
+  <a href="/">Главная</a>
+  
+  <span class="sep">•</span>
+  <span>Гильза картонная, шпуля картонная</span>
+  
+</div>
+      
+<h1 class="page-title">Гильза картонная</h1>
     <div class="catalog-layout">
       <aside class="sidebar">
         <div class="sidebar-title">Категории</div>

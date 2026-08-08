@@ -1,11 +1,19 @@
 {% extends "base.html" %}
-{% set crumbs = [{ name: 'Клещи (зажимное устройство)', url: '/mites/' }] %}
 {% block title %}Клещи (зажимное устройство) — Рафа{% endblock %}
 {% block description %}Клещи для скрепления ПП и ПЭТ ленты. Модели С3004, С5004, С5005, С5015, С5006. От 2100 руб.{% endblock %}
-{% block breadcrumbs %}{% include "macros/breadcrumbs.html" %}{% endblock %}
-{% block content %}
+{% block breadcrumbs %}
 <div class="breadcrumbs"><a href="/">Главная</a><span class="sep">•</span><a href="/catalog/">Каталог</a><span class="sep">•</span><a href="/catalog/packaging-tools/">Упаковочные инструменты</a><span class="sep">•</span><a href="/catalog/packaging-tools/strapping-tools/">Инструменты для стрепп-лент</a><span class="sep">•</span><span>Клещи</span></div>
-    <h1 class="page-title">Клещи (зажимное устройство)</h1>
+{% endblock %}
+{% block content %}
+<div class="breadcrumbs">
+  <a href="/">Главная</a>
+  
+  <span class="sep">•</span>
+  <span>Клещи (зажимное устройство)</span>
+  
+</div>
+      
+<h1 class="page-title">Клещи (зажимное устройство)</h1>
     <div class="catalog-layout">
       <aside class="sidebar">
         <div class="sidebar-title">Категории</div>

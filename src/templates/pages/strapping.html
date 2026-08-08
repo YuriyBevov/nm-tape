@@ -1,33 +1,38 @@
 {% extends "base.html" %}
-{% set crumbs = [{ name: 'Упаковочные стреппинг-ленты', url: '/strapping/' }] %}
 {% block title %}Упаковочные стреппинг-ленты — Рафа{% endblock %}
-{% block description %}Полипропиленовая стреппинг-лента для ручной и машинной упаковки. Доставка по России.{% endblock %}
-{% block breadcrumbs %}{% include "macros/breadcrumbs.html" %}{% endblock %}
-{% block content %}
+{% block description %}Полипропиленовая стреппинг-лента{% endblock %}
+{% block breadcrumbs %}
 <div class="breadcrumbs"><a href="/">Главная</a><span class="sep">•</span><a href="/catalog/">Каталог</a><span class="sep">•</span><span>Упаковочные стреппинг-ленты</span></div>
-    <h1 class="page-title">Упаковочные стреппинг-ленты</h1>
-    <div class="catalog-layout">
-      <aside class="sidebar">
-        <div class="sidebar-title">Категории</div>
-        <ul>
-          <li><a href="/catalog/strapping-pp-tape/" class="active">Упаковочные стреппинг-ленты</a>
-            <ul>
-              <li><a href="/catalog/strapping-pp-tape/pp-tape-for-manual-pack/">Лента для ручной упаковки</a></li>
-              <li><a href="/catalog/strapping-pp-tape/pp-tape-machine-packaging/">Лента для машинной упаковки</a></li>
-              <li><a href="/catalog/strapping-pp-tape/pp-tape-with-logo/">Стрепп-лента с логотипом</a></li>
-              <li><a href="/catalog/strapping-pp-tape/strap-polyester-tape/">Полиэстеровая стрепп-лента</a></li>
-              <li><a href="/catalog/packaging-tools/strapping-tools/">Инструмент для стрепп-лент</a></li>
-            </ul>
-          </li>
-          <li><a href="/catalog/adhesive-tape/">Клейкая лента</a></li>
-          <li><a href="/catalog/packaging-tools/">Упаковочные инструменты</a></li>
-          <li><a href="/catalog/special-tapes/">Специальные ленты</a></li>
-          <li><a href="/catalog/stretch-film/">Стрейч пленка</a></li>
-          <li><a href="/catalog/cardboard-sleeve/">Гильза картонная</a></li>
-        </ul>
-      </aside>
-      <div class="products-grid">
-        <div class="product-card">
-          <div class="product-img"><img src="/img/cat-strapping.jpg" alt="Ручная упаковка"></div>
-          <div class="product-body"><h3>Полипропиленовая стрепп-лента для ручной упаковки</h3><div class="product-desc">Лента для ручной обвязки коробов, кип и пачек весом до 340 кг. Ширина 9-19 мм.</div><a href="/catalog/strapping-pp-tape/pp-tape-for-manual-pack/" class="product-link">Подробнее →</a>
+{% endblock %}
+{% block content %}
+<h1 class="page-title">Упаковочные стреппинг-ленты</h1>
+<div class="catalog-layout">
+<aside class="sidebar"><div class="sidebar-title">Категории</div><ul>
+<li><a href="/catalog/strapping-pp-tape/" class="active">Упаковочные стреппинг-ленты</a><ul>
+  <li><a href="/catalog/strapping-pp-tape/pp-tape-for-manual-pack/">Для ручной упаковки</a></li>
+  <li><a href="/catalog/strapping-pp-tape/pp-tape-machine-packaging/">Для машинной упаковки</a></li>
+  <li><a href="/catalog/strapping-pp-tape/pp-tape-with-logo/">С логотипом</a></li>
+  <li><a href="/catalog/strapping-pp-tape/strap-polyester-tape/">Полиэстеровая</a></li>
+  <li><a href="/catalog/packaging-tools/strapping-tools/">Инструменты</a></li>
+</ul></li>
+<li><a href="/catalog/adhesive-tape/" >Клейкая лента</a></li>
+<li><a href="/catalog/packaging-tools/" >Упаковочные инструменты</a></li>
+<li><a href="/catalog/special-tapes/" >Специальные ленты</a></li>
+<li><a href="/catalog/stretch-film/" >Стрейч пленка</a></li>
+<li><a href="/catalog/cardboard-sleeve/" >Гильза картонная</a></li>
+</ul></aside>
+  <div class="products-grid">
+<div class="product-card"><div class="product-img"><img src="/img/cat-strapping.jpg" alt="Полипропиленовая стрепп-лента для ручной упаковки"></div><div class="product-body"><h3>Полипропиленовая стрепп-лента для ручной упаковки</h3><div class="product-desc">Лента для ручной обвязки коробов, кип и пачек весом до 340 кг. Ширина 9-19 мм.</div><a href="/catalog/strapping-pp-tape/pp-tape-for-manual-pack/" class="product-link">Подробнее →</a></div></div>
+    <div class="product-card"><div class="product-img"><img src="/img/cat-strapping.jpg" alt="Полипропиленовая стрепп-лента для машинной упаковки"></div><div class="product-body"><h3>Полипропиленовая стрепп-лента для машинной упаковки</h3><div class="product-desc">Лента для автоматических и полуавтоматических обвязчиков. Ширина 5-19 мм.</div><a href="/catalog/strapping-pp-tape/pp-tape-machine-packaging/" class="product-link">Подробнее →</a></div></div>
+    <div class="product-card"><div class="product-img"><img src="/img/cat-strapping.jpg" alt="Стрепп-лента с логотипом"></div><div class="product-body"><h3>Стрепп-лента с логотипом</h3><div class="product-desc">ПЭТ-лента и ПП лента с нанесением логотипа до гофрации. До 2 цветов.</div><a href="/catalog/strapping-pp-tape/pp-tape-with-logo/" class="product-link">Подробнее →</a></div></div>
+    <div class="product-card"><div class="product-img"><img src="/img/cat-strapping.jpg" alt="Полиэстеровая стрепп-лента"></div><div class="product-body"><h3>Полиэстеровая стрепп-лента</h3><div class="product-desc">Высокопрочный PET-материал, близкий по прочности к стальной ленте. Доставка от 3 дней.</div><a href="/catalog/strapping-pp-tape/strap-polyester-tape/" class="product-link">Подробнее →</a></div></div>
+    <div class="product-card"><div class="product-img"><img src="/img/cat-tools.jpg" alt="Инструмент для стрепп-лент"></div><div class="product-body"><h3>Инструмент для стрепп-лент</h3><div class="product-desc">Клещи и скрепа для скрепления ПП и ПЭТ ленты. Модели для лент 12-16 мм.</div><a href="/catalog/packaging-tools/strapping-tools/" class="product-link">Подробнее →</a></div></div>
+    
+  </div>
+</div>
+<div class="info-text" style="padding:40px 0 0">
+  <h2>Стойкая к разрыву. Гибкая система цен.</h2>
+  <p>Лента полипропиленовая упаковочная является прогрессивным видом упаковки, простым, недорогим и удобным материалом. Широкая гамма размеров позволяет использовать их для любых размеров и весов груза.</p>
+  <p><strong>Преимущества:</strong> лёгкая, крепкая, проста в применении, не ржавеет и не оставляет пятен. Стреппинг лента обладает большим коэффициентом упругости, она более стойкая к ударным нагрузкам, чем стальная.</p>
+</div>
 {% endblock %}

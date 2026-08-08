@@ -1,11 +1,19 @@
 {% extends "base.html" %}
-{% set crumbs = [{ name: 'Специальные ленты', url: '/mask/' }] %}
 {% block title %}Специальные ленты — Рафа{% endblock %}
 {% block description %}Изолента на основе флиса, клейкая лента малярная, двусторонняя клейкая лента на тканевой основе.{% endblock %}
-{% block breadcrumbs %}{% include "macros/breadcrumbs.html" %}{% endblock %}
-{% block content %}
+{% block breadcrumbs %}
 <div class="breadcrumbs"><a href="/">Главная</a><span class="sep">•</span><a href="/catalog/">Каталог</a><span class="sep">•</span><span>Специальные ленты<span class="sep">•</span><span>Клейкая лента малярная</span></div>
-    <h1 class="page-title">Клейкая лента малярная (крепп)</h1>
+{% endblock %}
+{% block content %}
+<div class="breadcrumbs">
+  <a href="/">Главная</a>
+  
+  <span class="sep">•</span>
+  <span>Специальные ленты</span>
+  
+</div>
+      
+<h1 class="page-title">Клейкая лента малярная (крепп)</h1>
     <div class="catalog-layout">
       <aside class="sidebar">
         <div class="sidebar-title">Категории</div>

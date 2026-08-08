@@ -1,33 +1,29 @@
 {% extends "base.html" %}
-{% set crumbs = [{ name: 'Стрепп-лента для машинной упаковки', url: '/machine/' }] %}
 {% block title %}Стрепп-лента для машинной упаковки — Рафа{% endblock %}
-{% block description %}Стрепп-лента для машинной упаковки 5 мм. До 6500 метров намотки.{% endblock %}
-{% block breadcrumbs %}{% include "macros/breadcrumbs.html" %}{% endblock %}
-{% block content %}
+{% block description %}Стрепп-лента для машинной упаковки 5 мм{% endblock %}
+{% block breadcrumbs %}
 <div class="breadcrumbs"><a href="/">Главная</a><span class="sep">•</span><a href="/catalog/">Каталог</a><span class="sep">•</span><a href="/catalog/strapping-pp-tape/">Упаковочные стреппинг-ленты</a><span class="sep">•</span><span>Для машинной упаковки</span></div>
-    <h1 class="page-title">Полипропиленовая стрепп-лента для машинной упаковки</h1>
-    <div class="catalog-layout">
-      <aside class="sidebar">
-        <div class="sidebar-title">Категории</div>
-        <ul>
-          <li><a href="/catalog/strapping-pp-tape/" class="active">Упаковочные стреппинг-ленты</a>
-            <ul>
-              <li><a href="/catalog/strapping-pp-tape/pp-tape-for-manual-pack/">Лента для ручной упаковки</a></li>
-              <li><a href="/catalog/strapping-pp-tape/pp-tape-machine-packaging/" class="active">Лента для машинной упаковки</a></li>
-              <li><a href="/catalog/strapping-pp-tape/pp-tape-with-logo/">Стрепп-лента с логотипом</a></li>
-              <li><a href="/catalog/strapping-pp-tape/strap-polyester-tape/">Полиэстеровая стрепп-лента</a></li>
-              <li><a href="/catalog/packaging-tools/strapping-tools/">Инструмент для стрепп-лент</a></li>
-            </ul>
-          </li>
-          <li><a href="/catalog/adhesive-tape/">Клейкая лента</a></li>
-          <li><a href="/catalog/packaging-tools/">Упаковочные инструменты</a></li>
-          <li><a href="/catalog/special-tapes/">Специальные ленты</a></li>
-          <li><a href="/catalog/stretch-film/">Стрейч пленка</a></li>
-          <li><a href="/catalog/cardboard-sleeve/">Гильза картонная</a></li>
-        </ul>
-      </aside>
-      <div class="products-grid">
-        <div class="product-card">
-          <div class="product-img"><img src="/img/cat-strapping.jpg" alt="Стрепп-лента машинная 5 мм"></div>
-          <div class="product-body"><h3>Стрепп-лента для машинной упаковки 5 мм</h3><div class="product-desc">Ширина 5 мм, толщина 0,45 мм, длина до 6500 метров, намотка 6500 м. Упаковка среднеразмерных и крупногабаритных коробов, паллет весом до 100 кг в полуавтоматических и автоматических обвязчиках.</div><a href="/contacts/" class="product-link">Быстрый заказ →</a>
+{% endblock %}
+{% block content %}
+<h1 class="page-title">Полипропиленовая стрепп-лента для машинной упаковки</h1>
+<div class="catalog-layout">
+<aside class="sidebar"><div class="sidebar-title">Категории</div><ul>
+<li><a href="/catalog/strapping-pp-tape/" class="active">Упаковочные стреппинг-ленты</a><ul>
+  <li><a href="/catalog/strapping-pp-tape/pp-tape-for-manual-pack/">Для ручной упаковки</a></li>
+  <li><a href="/catalog/strapping-pp-tape/pp-tape-machine-packaging/" class="active">Для машинной упаковки</a></li>
+  <li><a href="/catalog/strapping-pp-tape/pp-tape-with-logo/">С логотипом</a></li>
+  <li><a href="/catalog/strapping-pp-tape/strap-polyester-tape/">Полиэстеровая</a></li>
+  <li><a href="/catalog/packaging-tools/strapping-tools/">Инструменты</a></li>
+</ul></li>
+<li><a href="/catalog/adhesive-tape/" >Клейкая лента</a></li>
+<li><a href="/catalog/packaging-tools/" >Упаковочные инструменты</a></li>
+<li><a href="/catalog/special-tapes/" >Специальные ленты</a></li>
+<li><a href="/catalog/stretch-film/" >Стрейч пленка</a></li>
+<li><a href="/catalog/cardboard-sleeve/" >Гильза картонная</a></li>
+</ul></aside>
+  <div class="products-grid">
+<div class="product-card"><div class="product-img"><img src="/img/cat-strapping.jpg" alt="Стрепп-лента для машинной упаковки 5 мм"></div><div class="product-body"><h3>Стрепп-лента для машинной упаковки 5 мм</h3><div class="product-desc">Ширина 5 мм, толщина 0,45 мм, длина до 6500 метров. Для полуавтоматических и автоматических обвязчиков.</div><a href="/contacts/" class="product-link">Подробнее →</a></div></div>
+    
+  </div>
+</div>
 {% endblock %}
