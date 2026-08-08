@@ -9,19 +9,19 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
   {% block head_extra %}{% endblock %}
 </head>
 <body>
   {% include "topline.html" %}
   {% include "header.html" %}
   <div class="page">
-    <div class="container">
       {% block breadcrumbs %}{% endblock %}
       {% block content %}{% endblock %}
-    </div>
   </div>
   {% include "footer.html" %}
   <button class="to-top" id="toTop">↑</button>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="/js/main.js"></script>
 </body>
 </html>

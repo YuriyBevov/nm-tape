@@ -1,6 +1,6 @@
 {% extends "base.html" %}
-{% block title %}Главная — Рафа{% endblock %}
-{% block description %}Производство и продажа клейкой ленты, скотча, стреппинг-ленты, упаковочных материалов.{% endblock %}
+{% block title %}Авалон-С - лента полипропиленовая, клейкая лента с логотипом. Доставка по России | ООО Авалон-С{% endblock %}
+{% block description %}Производство и продажа полипропиленовой ленты, клейкой ленты с логотипом. Доставка по России.{% endblock %}
 {% block breadcrumbs %}
 <div class="breadcrumbs"><span>Главная</span></div>
 {% endblock %}
@@ -14,41 +14,42 @@
   <div class="swiper-pagination"></div>
 </div>
 
-<section class="features"><div class="container">
-  <h2 class="section-title">Почему выбирают нас</h2>
+<section class="section"><div class="container">
+  <h2 class="section-title">Почему с нами выгодно работать?</h2>
   <div class="features-grid">
-    <div class="feature-card"><div class="feature-icon">🏭</div><h3>Собственное производство</h3><p>Заключая контракт с нами, Вы получаете товар напрямую от производителя без посредников.</p></div>
-    <div class="feature-card"><div class="feature-icon">📦</div><h3>Широкий ассортимент</h3><p>Более 50 видов клейких лент и упаковочных материалов в наличии на складе.</p></div>
-    <div class="feature-card"><div class="feature-icon">🚚</div><h3>Доставка по России</h3><p>Собственный автопарк и сотрудничество с ТК обеспечивают доставку в любой регион.</p></div>
-    <div class="feature-card"><div class="feature-icon">💳</div><h3>Гибкая система скидок</h3><p>Индивидуальный подход к каждому клиенту. Специальные условия для постоянных заказчиков.</p></div>
+    <div class="feature-card"><div class="feature-num">01</div><h3>Собственное Производство!</h3><p>Заключая контракт с нами, Вы получаете прямой контракт с ПРОИЗВОДИТЕЛЕМ</p></div>
+    <div class="feature-card"><div class="feature-num">02</div><h3>Прямые поставки</h3><p>Мы осуществляем прямые поставки транспортными компаниями в любой город России, из: Саранска, Москвы, Санкт-Петербурга, Перми!</p></div>
+    <div class="feature-card"><div class="feature-num">03</div><h3>Заявленные параметры</h3><p>Вы получаете заявленные параметры упаковочных лент, а также соответствие длин намоток</p></div>
+    <div class="feature-card"><div class="feature-num">04</div><h3>Гарантия возврата</h3><p>Мы гарантируем возврат денег в случае если «вдруг» Вы сможете обнаружить какую-либо недостачу</p></div>
+    <div class="feature-card"><div class="feature-num">05</div><h3>Цены ниже</h3><p>Наши цены ниже относительно цен компаний-перепродавцов, присутствующих на рынке</p></div>
   </div>
 </div></section>
 
 <section class="section"><div class="container">
-  <h2 class="section-title">Каталог продукции</h2>
-  <p class="section-sub">Широкий ассортимент клейких лент и упаковочных материалов</p>
-  <div class="cat-grid">
-    {% for cat in catalog.full %}
-    <div class="cat-card">
-      <div class="cat-card-img"><img src="/img/{{ cat.img | default('cat-strapping.jpg') }}" alt="{{ cat.name }}"></div>
-      <div class="cat-card-body"><h3>{{ cat.name }}</h3><p>{{ cat.desc | default('') }}</p><a href="{{ cat.url }}">Смотреть →</a></div>
-    </div>
-    {% endfor %}
-  </div>
-</div></section>
-
-<section class="info-text"><div class="container">
-  <h2>Качественное и современное оборудование</h2>
+  <h2 class="section-title">Качественное и современное оборудование</h2>
   <p>Наше производство оснащено современным оборудованием, позволяющим выпускать продукцию европейского качества. Мы используем только качественное сырьё от проверенных поставщиков.</p>
-  <p>Вся продукция проходит контроль качества на всех этапах производства. Мы гарантируем стабильность характеристик и соответствие заявленным параметрам.</p>
 </div></section>
 
-<section class="section" style="background:var(--light)"><div class="container">
+<section class="section"><div class="container">
   <h2 class="section-title">Работать с нами удобно</h2>
-  <div class="features-grid">
-    <div class="feature-card"><div class="feature-icon">📞</div><h3>Москва</h3><p>{{ contacts.phones.msk }}</p></div>
-    <div class="feature-card"><div class="feature-icon">📞</div><h3>Санкт-Петербург</h3><p>{{ contacts.phones.spb }}</p></div>
-    <div class="feature-card"><div class="feature-icon">✉️</div><h3>Email</h3><p>{{ contacts.email }}</p></div>
+  <div class="contacts-grid">
+    <div class="contact-card"><h3>Москва</h3><p>Офис и склад в г. Москва</p><p>тел.: (495) 281-41-55</p></div>
+    <div class="contact-card"><h3>Санкт-Петербург</h3><p>Офис и склад в г. Санкт-Петербург</p><p>тел.: (812) 250-98-24</p></div>
+    <div class="contact-card"><h3>Саранск</h3><p>Офис и склад в г. Саранск</p><p>тел.: (495) 172-67-69</p></div>
+  </div>
+  <p>Если у вас возникнут дополнительные вопросы и предложения, свяжитесь с нами удобным для вас способом.</p>
+</div></section>
+
+<section class="section"><div class="container">
+  <h2 class="section-title">Каталог продукции</h2>
+  <div class="cat-grid">
+    <div class="cat-card"><div class="cat-card-img"><img src="/img/cat-strapping.jpg" alt="Стреппинг-ленты"></div><div class="cat-card-body"><h3>Упаковочные стреппинг-ленты</h3><a href="/catalog/strapping-pp-tape/">Смотреть →</a></div></div>
+    <div class="cat-card"><div class="cat-card-img"><img src="/img/cat-adhesive.jpg" alt="Клейкая лента с логотипом"></div><div class="cat-card-body"><h3>Клейкая лента с логотипом</h3><a href="/catalog/adhesive-tape/adhesive-tape-with-logo/">Смотреть →</a></div></div>
+    <div class="cat-card"><div class="cat-card-img"><img src="/img/cat-special.jpg" alt="Спец.ленты"></div><div class="cat-card-body"><h3>Изолента ПВХ. Спец.ленты</h3><a href="/catalog/special-tapes/">Смотреть →</a></div></div>
+    <div class="cat-card"><div class="cat-card-img"><img src="/img/cat-tools.jpg" alt="Инструменты"></div><div class="cat-card-body"><h3>Упаковочные инструменты</h3><a href="/catalog/packaging-tools/">Смотреть →</a></div></div>
+    <div class="cat-card"><div class="cat-card-img"><img src="/img/cat-sleeve.jpg" alt="Гильза"></div><div class="cat-card-body"><h3>Гильза картонная</h3><a href="/catalog/cardboard-sleeve/">Смотреть →</a></div></div>
+    <div class="cat-card"><div class="cat-card-img"><img src="/img/cat-stretch.jpg" alt="Стрейч пленка"></div><div class="cat-card-body"><h3>Стрейч пленка</h3><a href="/catalog/stretch-film/">Смотреть →</a></div></div>
+    <div class="cat-card"><div class="cat-card-img"><img src="/img/cat-strapping.jpg" alt="Стрепп-лента с логотипом"></div><div class="cat-card-body"><h3>Стрепп-лента с логотипом</h3><a href="/catalog/strapping-pp-tape/pp-tape-with-logo/">Смотреть →</a></div></div>
   </div>
 </div></section>
 {% endblock %}
