@@ -1,0 +1,7 @@
+<div class="breadcrumbs">
+  <a href="/">Главная</a>
+  {% for crumb in crumbs %}
+  <span class="sep">•</span>
+  {% if loop.last %}<span>{{ crumb.name }}</span>{% else %}<a href="{{ crumb.url }}">{{ crumb.name }}</a>{% endif %}
+  {% endfor %}
+</div>

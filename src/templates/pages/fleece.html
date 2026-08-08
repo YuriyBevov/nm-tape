@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% set crumbs = [{ name: 'Специальные ленты', url: '/fleece/' }] %}
+{% block title %}Специальные ленты — Рафа{% endblock %}
+{% block description %}Изолента на основе флиса, клейкая лента малярная, двусторонняя клейкая лента на тканевой основе.{% endblock %}
+{% block breadcrumbs %}{% include "macros/breadcrumbs.html" %}{% endblock %}
+{% block content %}
+<div class="breadcrumbs"><a href="/">Главная</a><span class="sep">•</span><a href="/catalog/">Каталог</a><span class="sep">•</span><span>Специальные ленты<span class="sep">•</span><span>Изолента на основе флиса</span></div>
+    <h1 class="page-title">Изолента на основе флиса</h1>
+    <div class="catalog-layout">
+      <aside class="sidebar">
+        <div class="sidebar-title">Категории</div>
+        <ul>
+          <li><a href="/catalog/strapping-pp-tape/">Упаковочные стреппинг-ленты</a></li>
+          <li><a href="/catalog/adhesive-tape/">Клейкая лента</a></li>
+          <li><a href="/catalog/packaging-tools/">Упаковочные инструменты</a></li>
+          <li><a href="/catalog/special-tapes/"">Специальные ленты</a>
+            <ul>
+              <li><a href="/catalog/special-tapes/duct-tape-on-the-basis-of-fleece/" class="active">Изолента на основе флиса</a></li>
+              <li><a href="/catalog/special-tapes/adhesive-tape-mask/">Клейкая лента малярная</a></li>
+              <li><a href="/catalog/special-tapes/double-sided-adhesive-tape-for-carpet/">Двусторонняя лента на тканевой основе</a></li>
+            </ul>
+          </li>
+          <li><a href="/catalog/stretch-film/">Стрейч пленка</a></li>
+          <li><a href="/catalog/cardboard-sleeve/">Гильза картонная</a></li>
+        </ul>
+      </aside>
+      <div class="products-grid">
+        <div class="product-card">
+          <div class="product-img"><img src="/img/cat-special.jpg" alt="Изолента флисовая 19мм*15м"></div>
+          <div class="product-body"><h3>Изолента флисовая 19мм*15м черная</h3><div class="product-desc">Изоляционная лента на нетканой полиэстеровой флисовой основе (Тайвань). Толщина 0,35±0,05 мм, акриловый клей. 180 роликов в коробе. Реализуем от 1 ролика!</div><a href="/contacts/" class="product-link">Уточнить цену →</a>
+{% endblock %}

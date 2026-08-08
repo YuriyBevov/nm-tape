@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %}Рафа — продажа упаковочных материалов{% endblock %}</title>
+  <meta name="description" content="{% block description %}Производство и продажа клейкой ленты и упаковочных материалов.{% endblock %}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+  {% block head_extra %}{% endblock %}
+</head>
+<body>
+  {% include "topline.html" %}
+  {% include "header.html" %}
+  <div class="page">
+    <div class="container">
+      {% block breadcrumbs %}{% endblock %}
+      {% block content %}{% endblock %}
+    </div>
+  </div>
+  {% include "footer.html" %}
+  <button class="to-top" id="toTop">↑</button>
+  <script src="/js/main.js"></script>
+</body>
+</html>

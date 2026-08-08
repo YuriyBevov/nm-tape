@@ -1,0 +1,17 @@
+<aside class="sidebar">
+  <div class="sidebar-title">Категории</div>
+  <ul>
+  {% for cat in catalog.full %}
+    <li>
+      {% if cat.active %}<a href="{{ cat.url }}" class="active">{{ cat.name }}</a>{% else %}<a href="{{ cat.url }}">{{ cat.name }}</a>{% endif %}
+      {% if cat.children and cat.open %}
+      <ul>
+        {% for child in cat.children %}
+        <li>{% if child.active %}<a href="{{ child.url }}" class="active">{{ child.name }}</a>{% else %}<a href="{{ child.url }}">{{ child.name }}</a>{% endif %}</li>
+        {% endfor %}
+      </ul>
+      {% endif %}
+    </li>
+  {% endfor %}
+  </ul>
+</aside>

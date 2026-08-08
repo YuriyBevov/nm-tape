@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% set crumbs = [{ name: 'Каталог продукции', url: '/catalog/' }] %}
+{% block title %}Каталог продукции — Рафа{% endblock %}
+{% block description %}Каталог упаковочных материалов: стреппинг-ленты, клейкая лента, инструменты.{% endblock %}
+{% block breadcrumbs %}{% include "macros/breadcrumbs.html" %}{% endblock %}
+{% block content %}
+<h1 class="page-title">Каталог продукции</h1>
+<div class="cat-grid">
+  {% for cat in catalog.full %}
+  <div class="cat-card"><div class="cat-card-img"><img src="/img/cat-{{ cat.img | default('strapping.jpg') }}" alt="{{ cat.name }}"></div><div class="cat-card-body"><h3>{{ cat.name }}</h3><a href="{{ cat.url }}">Смотреть →</a></div></div>
+  {% endfor %}
+</div>
+{% endblock %}

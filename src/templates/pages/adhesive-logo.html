@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% set crumbs = [{ name: 'Клейкая лента с логотипом заказать недорого, купить фирменную ленту с логотипом', url: '/adhesive-logo/' }] %}
+{% block title %}Клейкая лента с логотипом заказать недорого, купить фирменную ленту с логотипом — Рафа{% endblock %}
+{% block description %}Клейкая лента с логотипом. Печать флексографическим способом. От 56 руб. Доставка по России.{% endblock %}
+{% block breadcrumbs %}{% include "macros/breadcrumbs.html" %}{% endblock %}
+{% block content %}
+<div class="breadcrumbs"><a href="/">Главная</a><span class="sep">•</span><a href="/catalog/">Каталог</a><span class="sep">•</span><a href="/catalog/adhesive-tape/">Клейкая лента</a><span class="sep">•</span><span>Клейкая лента с логотипом</span></div>
+    <h1 class="page-title">Клейкая лента с логотипом</h1>
+    <div class="catalog-layout">
+      <aside class="sidebar">
+        <div class="sidebar-title">Категории</div>
+        <ul>
+          <li><a href="/catalog/strapping-pp-tape/">Упаковочные стреппинг-ленты</a></li>
+          <li><a href="/catalog/adhesive-tape/" class="active">Клейкая лента</a>
+            <ul>
+              <li><a href="/catalog/adhesive-tape/adhesive-tape-packing/">Клейкая лента упаковочная</a></li>
+              <li><a href="/catalog/adhesive-tape/adhesive-tape-with-logo/" class="active">Клейкая лента с логотипом</a></li>
+              <li><a href="/catalog/adhesive-tape/adhesive-tape-with-special-inscriptions/">Лента со спец. надписями</a></li>
+              <li><a href="/catalog/packaging-tools/tools-for-adhesive-tapes-2/">Инструменты для клейких лент</a></li>
+              <li><a href="/catalog/adhesive-tape/adhesive-tape-information/">Полезная информация</a></li>
+            </ul>
+          </li>
+          <li><a href="/catalog/packaging-tools/">Упаковочные инструменты</a></li>
+          <li><a href="/catalog/special-tapes/">Специальные ленты</a></li>
+          <li><a href="/catalog/stretch-film/">Стрейч пленка</a></li>
+          <li><a href="/catalog/cardboard-sleeve/">Гильза картонная</a></li>
+        </ul>
+      </aside>
+      <div class="products-grid">
+        <div class="product-card">
+          <div class="product-img"><img src="/img/cat-logo.svg" alt="1 цвет"></div>
+          <div class="product-body"><h3>Лента клейкая с логотипом в 1 цвет печати</h3><div class="product-desc">Печать наносится на пленку флексографическим способом одним цветом печати.</div><div class="price" style="font-size:18px;margin-bottom:8px">от 56,00 руб.</div><a href="/catalog/adhesive-tape/adhesive-tape-with-logo/1-color/" class="product-link">Подробнее →</a>
+{% endblock %}

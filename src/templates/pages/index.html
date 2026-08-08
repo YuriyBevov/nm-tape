@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% block title %}Главная — Рафа{% endblock %}
+{% block description %}Производство и продажа клейкой ленты, скотча, стреппинг-ленты, упаковочных материалов.{% endblock %}
+{% block breadcrumbs %}
+<div class="breadcrumbs"><span>Главная</span></div>
+{% endblock %}
+{% block content %}
+<div class="hero-slider swiper hero-swiper">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide"><div class="hero-content"><h1>Клейкая лента оптом</h1><p>Собственное производство. Доставка по всей России.</p></div></div>
+    <div class="swiper-slide"><div class="hero-content"><h1>Стреппинг-лента от производителя</h1><p>Полипропилен и ПЭТ. Любые размеры.</p></div></div>
+    <div class="swiper-slide"><div class="hero-content"><h1>Лента с логотипом</h1><p>Флексографическая печать. От 1 цвета.</p></div></div>
+  </div>
+  <div class="swiper-pagination"></div>
+</div>
+
+<section class="features"><div class="container">
+  <h2 class="section-title">Почему выбирают нас</h2>
+  <div class="features-grid">
+    <div class="feature-card"><div class="feature-icon">🏭</div><h3>Собственное производство</h3><p>Заключая контракт с нами, Вы получаете товар напрямую от производителя без посредников.</p></div>
+    <div class="feature-card"><div class="feature-icon">📦</div><h3>Широкий ассортимент</h3><p>Более 50 видов клейких лент и упаковочных материалов в наличии на складе.</p></div>
+    <div class="feature-card"><div class="feature-icon">🚚</div><h3>Доставка по России</h3><p>Собственный автопарк и сотрудничество с ТК обеспечивают доставку в любой регион.</p></div>
+    <div class="feature-card"><div class="feature-icon">💳</div><h3>Гибкая система скидок</h3><p>Индивидуальный подход к каждому клиенту. Специальные условия для постоянных заказчиков.</p></div>
+  </div>
+</div></section>
+
+<section class="section"><div class="container">
+  <h2 class="section-title">Каталог продукции</h2>
+  <p class="section-sub">Широкий ассортимент клейких лент и упаковочных материалов</p>
+  <div class="cat-grid">
+    {% for cat in catalog.full %}
+    <div class="cat-card">
+      <div class="cat-card-img"><img src="/img/{{ cat.img | default('cat-strapping.jpg') }}" alt="{{ cat.name }}"></div>
+      <div class="cat-card-body"><h3>{{ cat.name }}</h3><p>{{ cat.desc | default('') }}</p><a href="{{ cat.url }}">Смотреть →</a></div>
+    </div>
+    {% endfor %}
+  </div>
+</div></section>
+
+<section class="info-text"><div class="container">
+  <h2>Качественное и современное оборудование</h2>
+  <p>Наше производство оснащено современным оборудованием, позволяющим выпускать продукцию европейского качества. Мы используем только качественное сырьё от проверенных поставщиков.</p>
+  <p>Вся продукция проходит контроль качества на всех этапах производства. Мы гарантируем стабильность характеристик и соответствие заявленным параметрам.</p>
+</div></section>
+
+<section class="section" style="background:var(--light)"><div class="container">
+  <h2 class="section-title">Работать с нами удобно</h2>
+  <div class="features-grid">
+    <div class="feature-card"><div class="feature-icon">📞</div><h3>Москва</h3><p>{{ contacts.phones.msk }}</p></div>
+    <div class="feature-card"><div class="feature-icon">📞</div><h3>Санкт-Петербург</h3><p>{{ contacts.phones.spb }}</p></div>
+    <div class="feature-card"><div class="feature-icon">✉️</div><h3>Email</h3><p>{{ contacts.email }}</p></div>
+  </div>
+</div></section>
+{% endblock %}

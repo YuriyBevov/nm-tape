@@ -1,0 +1,31 @@
+{
+  "main": [
+    { "name": "Стреппинг-ленты", "url": "/catalog/strapping-pp-tape/" },
+    { "name": "Клейкая лента", "url": "/catalog/adhesive-tape/" },
+    { "name": "Инструменты", "url": "/catalog/packaging-tools/" }
+  ],
+  "full": [
+    { "name": "Упаковочные стреппинг-ленты", "url": "/catalog/strapping-pp-tape/", "children": [
+      { "name": "Для ручной упаковки", "url": "/catalog/strapping-pp-tape/pp-tape-for-manual-pack/" },
+      { "name": "Для машинной упаковки", "url": "/catalog/strapping-pp-tape/pp-tape-machine-packaging/" },
+      { "name": "С логотипом", "url": "/catalog/strapping-pp-tape/pp-tape-with-logo/" },
+      { "name": "Полиэстеровая", "url": "/catalog/strapping-pp-tape/strap-polyester-tape/" },
+      { "name": "Инструменты", "url": "/catalog/packaging-tools/strapping-tools/" }
+    ]},
+    { "name": "Клейкая лента", "url": "/catalog/adhesive-tape/", "children": [
+      { "name": "Упаковочная", "url": "/catalog/adhesive-tape/adhesive-tape-packing/" },
+      { "name": "С логотипом", "url": "/catalog/adhesive-tape/adhesive-tape-with-logo/" },
+      { "name": "Со спец. надписями", "url": "/catalog/adhesive-tape/adhesive-tape-with-special-inscriptions/" }
+    ]},
+    { "name": "Упаковочные инструменты", "url": "/catalog/packaging-tools/", "children": [
+      { "name": "Инструменты для стрепп-лент", "url": "/catalog/packaging-tools/strapping-tools/" }
+    ]},
+    { "name": "Специальные ленты", "url": "/catalog/special-tapes/", "children": [
+      { "name": "Изолента флисовая", "url": "/catalog/special-tapes/duct-tape-on-the-basis-of-fleece/" },
+      { "name": "Малярная лента", "url": "/catalog/special-tapes/adhesive-tape-mask/" },
+      { "name": "Двусторонняя лента", "url": "/catalog/special-tapes/double-sided-adhesive-tape-for-carpet/" }
+    ]},
+    { "name": "Стрейч пленка", "url": "/catalog/stretch-film/" },
+    { "name": "Гильза картонная", "url": "/catalog/cardboard-sleeve/" }
+  ]
+}

@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% set crumbs = [{ name: 'Стрейч пленка', url: '/stretch/' }] %}
+{% block title %}Стрейч пленка — Рафа{% endblock %}
+{% block description %}Стрейч пленка из линейного полиэтилена низкой плотности. Штатив для стрейч пленки, широкоформатная пленка.{% endblock %}
+{% block breadcrumbs %}{% include "macros/breadcrumbs.html" %}{% endblock %}
+{% block content %}
+<div class="breadcrumbs"><a href="/">Главная</a><span class="sep">•</span><a href="/catalog/">Каталог</a><span class="sep">•</span><span>Стрейч пленка</span></div>
+    <h1 class="page-title">Стрейч пленка</h1>
+    <div class="catalog-layout">
+      <aside class="sidebar">
+        <div class="sidebar-title">Категории</div>
+        <ul>
+          <li><a href="/catalog/strapping-pp-tape/">Упаковочные стреппинг-ленты</a></li>
+          <li><a href="/catalog/adhesive-tape/">Клейкая лента</a></li>
+          <li><a href="/catalog/packaging-tools/">Упаковочные инструменты</a></li>
+          <li><a href="/catalog/special-tapes/">Специальные ленты</a></li>
+          <li><a href="/catalog/stretch-film/" class="active">Стрейч пленка</a></li>
+          <li><a href="/catalog/cardboard-sleeve/">Гильза картонная</a></li>
+        </ul>
+      </aside>
+      <div class="products-grid">
+        <div class="product-card">
+          <div class="product-img"><img src="/img/cat-stretch.jpg" alt="Стрейч пленка"></div>
+          <div class="product-body"><h3>Стрейч пленка (стретч)</h3><div class="product-desc">Стрейч пленка изготовлена из линейного полиэтилена низкой плотности (ЛПЭНП). Для ручной и машинной намотки. Защита и хранение грузов.</div><a href="/contacts/" class="product-link">Уточнить цену →</a>
+{% endblock %}

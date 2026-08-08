@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% set crumbs = [{ name: 'Упаковочные инструменты', url: '/tools/' }] %}
+{% block title %}Упаковочные инструменты — Рафа{% endblock %}
+{% block description %}Инструменты для стрепп-лент: клещи, скрепа упаковочная, скобы. Цены от 2100 руб.{% endblock %}
+{% block breadcrumbs %}{% include "macros/breadcrumbs.html" %}{% endblock %}
+{% block content %}
+<div class="breadcrumbs"><a href="/">Главная</a><span class="sep">•</span><a href="/catalog/">Каталог</a><span class="sep">•</span><span>Упаковочные инструменты</span></div>
+    <h1 class="page-title">Упаковочные инструменты</h1>
+    <div class="catalog-layout">
+      <aside class="sidebar">
+        <div class="sidebar-title">Категории</div>
+        <ul>
+          <li><a href="/catalog/strapping-pp-tape/">Упаковочные стреппинг-ленты</a></li>
+          <li><a href="/catalog/adhesive-tape/">Клейкая лента</a></li>
+          <li><a href="/catalog/packaging-tools/" class="active">Упаковочные инструменты</a>
+            <ul>
+              <li><a href="/catalog/packaging-tools/strapping-tools/">Инструменты для стрепп-лент</a></li>
+            </ul>
+          </li>
+          <li><a href="/catalog/special-tapes/">Специальные ленты</a></li>
+          <li><a href="/catalog/stretch-film/">Стрейч пленка</a></li>
+          <li><a href="/catalog/cardboard-sleeve/">Гильза картонная</a></li>
+        </ul>
+      </aside>
+      <div class="products-grid">
+        <div class="cat-card">
+          <div class="cat-card-img"><img src="/img/cat-tools.jpg" alt="Инструменты для стрепп-лент"></div>
+          <div class="cat-card-body"><h3>Инструменты для стрепп-лент</h3><p>Клещи для скрепления ПП и ПЭТ ленты, скрепа упаковочная, скобы. Цены от 2100 руб.</p><a href="/catalog/packaging-tools/strapping-tools/">Смотреть →</a>
+{% endblock %}

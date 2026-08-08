@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% set crumbs = [{ name: 'Специальные ленты', url: '/mask/' }] %}
+{% block title %}Специальные ленты — Рафа{% endblock %}
+{% block description %}Изолента на основе флиса, клейкая лента малярная, двусторонняя клейкая лента на тканевой основе.{% endblock %}
+{% block breadcrumbs %}{% include "macros/breadcrumbs.html" %}{% endblock %}
+{% block content %}
+<div class="breadcrumbs"><a href="/">Главная</a><span class="sep">•</span><a href="/catalog/">Каталог</a><span class="sep">•</span><span>Специальные ленты<span class="sep">•</span><span>Клейкая лента малярная</span></div>
+    <h1 class="page-title">Клейкая лента малярная (крепп)</h1>
+    <div class="catalog-layout">
+      <aside class="sidebar">
+        <div class="sidebar-title">Категории</div>
+        <ul>
+          <li><a href="/catalog/strapping-pp-tape/">Упаковочные стреппинг-ленты</a></li>
+          <li><a href="/catalog/adhesive-tape/">Клейкая лента</a></li>
+          <li><a href="/catalog/packaging-tools/">Упаковочные инструменты</a></li>
+          <li><a href="/catalog/special-tapes/"">Специальные ленты</a>
+            <ul>
+              <li><a href="/catalog/special-tapes/duct-tape-on-the-basis-of-fleece/">Изолента на основе флиса</a></li>
+              <li><a href="/catalog/special-tapes/adhesive-tape-mask/" class="active">Клейкая лента малярная</a></li>
+              <li><a href="/catalog/special-tapes/double-sided-adhesive-tape-for-carpet/">Двусторонняя лента на тканевой основе</a></li>
+            </ul>
+          </li>
+          <li><a href="/catalog/stretch-film/">Стрейч пленка</a></li>
+          <li><a href="/catalog/cardboard-sleeve/">Гильза картонная</a></li>
+        </ul>
+      </aside>
+      <div class="products-grid">
+        <div class="product-card">
+          <div class="product-img"><img src="/img/cat-special.jpg" alt="Малярная лента крепп"></div>
+          <div class="product-body"><h3>Клейкая лента малярная (крепп)</h3><div class="product-desc">Лента малярная на бумажной основе применяется для защиты поверхностей при проведении малярных, штукатурных работ, временной герметизации швов и трещин, заклейки окон. После снятия не оставляет следов клея.</div><a href="/contacts/" class="product-link">Уточнить цену →</a>
+{% endblock %}
