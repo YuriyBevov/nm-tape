@@ -11,5 +11,8 @@
   "license": "ISC",
   "dependencies": {
     "nunjucks": "^3.2.4"
+  },
+  "devDependencies": {
+    "sass": "^1.102.0"
   }
 }

@@ -1,0 +1,284 @@
+// ═══════════════════════════════════════════
+// Компоненты
+// ═══════════════════════════════════════════
+
+@use 'base/variables' as *;
+
+// ─── Кнопки ───
+
+@mixin btn-base {
+  border: none;
+  font-family: $font-sans;
+  font-size: $text-body-sm;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: $spacing-8;
+  transition: background .15s, color .15s;
+}
+
+.btn-ivory {
+  @include btn-base;
+  background: $ivory-light;
+  color: $slate-dark;
+  border-radius: $spacing-8 $spacing-8 24px 24px;
+  padding: 12px 31px;
+  &:hover { background: #efede5; }
+}
+
+.btn-clay {
+  @include btn-base;
+  background: $clay;
+  color: $slate-dark;
+  border-radius: $spacing-8 $spacing-8 24px 24px;
+  padding: 12px 31px;
+  font-weight: 600;
+  &:hover { background: $clay-deep; }
+}
+
+.btn-text {
+  @include btn-base;
+  background: transparent;
+  color: $slate-dark;
+  border-radius: 0;
+  padding: 22px 12px;
+  font-size: $text-caption;
+  text-transform: uppercase;
+  letter-spacing: $tracking-caption;
+  &:hover { text-decoration: underline; }
+}
+
+.btn-outline-dark {
+  @include btn-base;
+  background: transparent;
+  color: $ivory-light;
+  border: 1px solid $cloud-dark;
+  border-radius: 12px;
+  padding: 8px 16px;
+  font-size: $text-caption;
+}
+
+// ─── Навигация ───
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: $page-max-width;
+  margin: 0 auto;
+  padding: 0 $spacing-24;
+  font-family: $font-sans;
+  font-size: $text-caption;
+  text-transform: uppercase;
+  letter-spacing: $tracking-caption;
+}
+
+.nav-links {
+  display: flex;
+  gap: $spacing-8;
+  a {
+    color: $cloud-medium;
+    text-decoration: none;
+    padding: 22px 12px;
+    transition: color .15s;
+    &:hover { color: $slate-dark; }
+  }
+}
+
+// ─── Карточки ───
+
+.card {
+  background: $ivory-light;
+  border-radius: 24px;
+  padding: $spacing-24;
+  transition: background .15s;
+  &:hover { background: #efede5; }
+}
+
+.card-featured {
+  background: $manilla;
+  border-radius: 24px;
+  padding: $spacing-32;
+}
+
+// ─── Сетки ───
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: $spacing-24;
+  max-width: $page-max-width;
+  margin: 0 auto;
+  padding: 0 $spacing-24;
+}
+
+// ─── Hero ───
+
+.hero {
+  max-width: $page-max-width;
+  margin: 0 auto;
+  padding: $spacing-100 $spacing-24;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: $spacing-76;
+}
+
+// ─── Таблица цен ───
+
+.price-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: $font-sans;
+  font-size: 14px;
+  th, td {
+    padding: $spacing-8 $spacing-12;
+    border: 1px solid $stone;
+    text-align: center;
+  }
+  th {
+    background: $ivory-light;
+    font-weight: 600;
+    color: $slate-dark;
+  }
+  td:first-child { text-align: left; font-weight: 600; }
+}
+
+// ─── Футер ───
+
+.footer {
+  background: $slate-dark;
+  color: $ivory-light;
+  padding: $spacing-76 $spacing-24;
+  font-family: $font-sans;
+  font-size: $text-caption;
+}
+
+.footer-grid {
+  max-width: $page-max-width;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: $spacing-32;
+  h4 {
+    font-family: $font-sans;
+    font-size: $text-caption;
+    font-weight: 600;
+    color: $ivory-light;
+    text-transform: uppercase;
+    letter-spacing: $tracking-caption;
+    margin-bottom: $spacing-16;
+  }
+  a {
+    color: $cloud-medium;
+    text-decoration: none;
+    display: block;
+    margin-bottom: $spacing-8;
+    &:hover { color: $ivory-light; }
+  }
+}
+
+// ─── Catalog layout ───
+
+.catalog-layout {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: $spacing-32;
+  align-items: start;
+}
+
+.sidebar {
+  font-family: $font-sans;
+  font-size: 14px;
+  &-title {
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: $tracking-caption;
+    font-size: $text-caption;
+    color: $cloud-medium;
+    margin-bottom: $spacing-12;
+  }
+  ul ul { padding-left: $spacing-16; }
+  a {
+    color: $slate-dark;
+    text-decoration: none;
+    display: block;
+    padding: $spacing-4 0;
+    &:hover { color: $clay; }
+    &.active { color: $clay; font-weight: 600; }
+  }
+}
+
+// ─── Products grid (каталог) ───
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: $spacing-24;
+}
+
+.product-card {
+  background: $ivory-light;
+  border-radius: 24px;
+  overflow: hidden;
+  transition: background .15s;
+  &:hover { background: #efede5; }
+  &-img {
+    aspect-ratio: 4/3;
+    overflow: hidden;
+    img { width: 100%; height: 100%; object-fit: cover; }
+  }
+  &-body {
+    padding: $spacing-16;
+    h3 { font-size: 18px; font-weight: 600; margin-bottom: $spacing-8; }
+  }
+  &-desc { font-size: 14px; color: $cloud-dark; line-height: 1.5; margin-bottom: $spacing-12; }
+  &-price { font-weight: 600; color: $clay; margin-bottom: $spacing-8; }
+  &-link { color: $clay; font-weight: 600; font-family: $font-sans; font-size: 14px; }
+}
+
+.cat-card {
+  background: $ivory-light;
+  border-radius: 24px;
+  overflow: hidden;
+  transition: background .15s;
+  &:hover { background: #efede5; }
+  &-img { aspect-ratio: 4/3; overflow: hidden; img { width: 100%; height: 100%; object-fit: cover; } }
+  &-body { padding: $spacing-16; h3 { font-size: 18px; font-weight: 600; } p { font-size: 14px; color: $cloud-dark; } a { color: $clay; font-weight: 600; font-family: $font-sans; font-size: 14px; } }
+}
+
+// ─── Информационный блок ───
+
+.info-text {
+  padding: $spacing-32 0;
+  font-family: $font-serif;
+  font-size: $text-body;
+  line-height: 1.6;
+  h2 { font-family: $font-sans; font-size: $text-subheading; font-weight: 600; margin: $spacing-24 0 $spacing-12; }
+  ul { list-style: disc; padding-left: $spacing-24; margin-bottom: 1em; li { margin-bottom: $spacing-4; } }
+}
+
+// ─── Hero slider ───
+
+.hero-slider {
+  background: $slate-dark;
+  color: $ivory-light;
+  position: relative;
+}
+
+.hero-content {
+  padding: 80px 24px;
+  max-width: $page-max-width;
+  margin: 0 auto;
+  h1 { color: $ivory-light; font-size: $text-heading; font-family: $font-sans; font-weight: 700; }
+  p { font-family: $font-serif; font-size: $text-body; line-height: 1.5; max-width: 600px; }
+}
+
+// ─── Responsive ───
+
+@media (max-width: 900px) {
+  .grid-3, .catalog-layout { grid-template-columns: 1fr; }
+  .hero { grid-template-columns: 1fr; gap: $spacing-32; padding: $spacing-48 $spacing-24; }
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+  .nav-links a { padding: 12px 8px; }
+  h1 { font-size: 32px; }
+}

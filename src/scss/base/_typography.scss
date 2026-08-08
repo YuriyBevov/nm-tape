@@ -1,0 +1,58 @@
+// ═══════════════════════════════════════════
+// Типографика
+// ═══════════════════════════════════════════
+
+@use 'base/variables' as *;
+
+h1, h2, h3, h4 {
+  font-family: $font-sans;
+  font-weight: 700;
+  color: $slate-dark;
+  margin: 0;
+}
+
+h1 { font-size: $text-heading; line-height: $leading-heading; letter-spacing: $tracking-heading; }
+h2 { font-size: 36px; }
+h3 { font-size: $text-subheading; }
+h4 { font-size: $text-body; }
+
+p {
+  margin: 0 0 1em;
+  &:last-child { margin-bottom: 0; }
+}
+
+.caption {
+  font-family: $font-sans;
+  font-size: $text-caption;
+  line-height: $leading-caption;
+  letter-spacing: $tracking-caption;
+  color: $cloud-medium;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.heading-declarative {
+  font-family: $font-sans;
+  font-size: $text-heading;
+  font-weight: 700;
+  line-height: $leading-heading;
+  letter-spacing: $tracking-heading;
+}
+
+.heading-editorial {
+  font-family: $font-serif;
+  font-size: $text-display;
+  font-weight: 400;
+  line-height: $leading-heading;
+  color: $slate-dark;
+}
+
+.breadcrumbs {
+  font-family: $font-sans;
+  font-size: $text-caption;
+  color: $cloud-medium;
+  padding: $spacing-16 0;
+  a { color: $cloud-medium; &:hover { color: $slate-dark; } }
+  .sep { margin: 0 $spacing-8; }
+  span:last-child { color: $slate-dark; font-weight: 600; }
+}
