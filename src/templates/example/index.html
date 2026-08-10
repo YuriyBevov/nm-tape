@@ -3,13 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>НьюМарк — Клейкая лента и аксессуары для упаковки</title>
+<title>НЬЮМАРК — Клейкая лента и аксессуары для упаковки</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Oswald:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-/* ═══════════════════════════════════════════
-   Signal Noir — Design System
-   ═══════════════════════════════════════════ */
 :root {
   --bg-primary: #0D0D0B;
   --bg-secondary: #15130F;
@@ -24,469 +21,134 @@
   --font-heading: 'Oswald', sans-serif;
   --font-body: 'IBM Plex Sans', sans-serif;
   --font-mono: 'JetBrains Mono', monospace;
-  --page-width: 1440px;
   --content-width: 1280px;
 }
-
 * { margin: 0; padding: 0; box-sizing: border-box; }
+body { background: var(--bg-primary); color: var(--text-primary); font-family: var(--font-body); overflow-x: hidden; }
+.header { position: fixed; top:0; left:0; right:0; z-index:100; background:var(--header-bg); backdrop-filter:blur(12px); }
+.header-inner { max-width:var(--content-width); margin:0 auto; display:flex; align-items:center; justify-content:space-between; padding:0 24px; height:72px; }
+.header-logo { width:128px; height:60px; display:flex; align-items:center; justify-content:center; }
+.header-logo img { max-width:100%; max-height:100%; }
+.nav { display:flex; align-items:center; gap:24px; }
+.nav a { font-family:var(--font-mono); font-size:14px; font-weight:700; color:#fff; text-decoration:none; transition:opacity .15s; }
+.nav a:hover { opacity:.7; }
+.nav a.active { font-size:16px; }
+.header-actions { display:flex; align-items:center; gap:12px; }
+.social-icon { width:40px; height:40px; border-radius:50%; background:rgba(255,252,243,0.8); display:flex; align-items:center; justify-content:center; }
+.btn-callback { padding:12px 24px; height:48px; background:var(--accent); color:#fff; border:none; font-family:var(--font-mono); font-size:16px; font-weight:700; cursor:pointer; transition:opacity .15s; }
+.btn-callback:hover { opacity:.85; }
 
-body {
-  background: var(--bg-primary);
-  color: var(--text-primary);
-  font-family: var(--font-body);
-  overflow-x: hidden;
-}
+/* Slashes */
+.slash { position:absolute; width:260px; height:16px; border-radius:8px; pointer-events:none; }
 
-/* ─── Header ─── */
-.header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 100;
-  background: rgba(255,255,255,0.6);
-  backdrop-filter: blur(12px);
-}
-.header-inner {
-  max-width: var(--content-width);
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 12px 24px;
-}
-.header-logo {
-  width: 128px;
-  height: 60px;
-  background: #0D0D0B;
-  border-radius: 4px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: var(--font-mono);
-  font-size: 14px;
-  font-weight: 500;
-  color: #fff;
-}
-.nav { display: flex; align-items: center; gap: 24px; }
-.nav a {
-  font-family: var(--font-mono);
-  font-size: 14px;
-  color: #fff;
-  text-decoration: none;
-  transition: opacity .15s;
-}
-.nav a:hover { opacity: .7; }
-.nav a.active { font-size: 16px; font-weight: 500; }
-.header-actions { display: flex; align-items: center; gap: 12px; }
-.social-icon {
-  width: 40px; height: 40px;
-  border-radius: 50%;
-  background: rgba(255,252,243,0.8);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 11px;
-  font-family: var(--font-mono);
-  color: #0D0D0B;
-}
-.btn-callback {
-  padding: 12px 24px;
-  background: var(--accent);
-  color: #fff;
-  border: none;
-  font-family: var(--font-mono);
-  font-size: 14px;
-  cursor: pointer;
-  transition: opacity .15s;
-}
-.btn-callback:hover { opacity: .85; }
+/* Hero */
+.hero { min-height:764px; background:linear-gradient(180deg, #0D0D0B 0%, #1A1814 100%); display:flex; align-items:center; padding-top:84px; position:relative; }
+.hero-inner { max-width:var(--content-width); margin:0 auto; display:grid; grid-template-columns:1fr 1fr; gap:60px; align-items:center; padding:0 24px; }
+.hero-title { font-family:var(--font-heading); font-size:74px; font-weight:700; line-height:1.05; color:var(--text-primary); margin-bottom:16px; white-space:pre-line; }
+.hero-desc { font-size:20px; line-height:1.5; color:var(--text-secondary); margin-bottom:24px; font-weight:400; }
+.hero-actions { display:flex; gap:12px; }
+.btn-primary { padding:14px 24px; background:var(--accent); color:#fff; border:none; font-family:var(--font-mono); font-size:16px; font-weight:700; cursor:pointer; transition:opacity .15s; white-space:nowrap; }
+.btn-primary:hover { opacity:.85; }
+.btn-secondary { padding:14px 24px; background:transparent; color:#fff; border:1px solid var(--accent); font-family:var(--font-mono); font-size:16px; font-weight:700; cursor:pointer; transition:all .15s; white-space:nowrap; }
+.btn-secondary:hover { background:rgba(255,132,0,0.1); }
+.hero-image { width:100%; aspect-ratio:520/640; background:linear-gradient(135deg,#2A251E,#1A1814); border-radius:4px; display:flex; align-items:center; justify-content:center; font-family:var(--font-mono); font-size:12px; color:var(--text-muted); }
 
-/* ─── Hero ─── */
-.hero {
-  min-height: 764px;
-  background: linear-gradient(180deg, #0D0D0B 0%, #1A1814 100%);
-  display: flex;
-  align-items: center;
-  padding-top: 84px;
-}
-.hero-inner {
-  max-width: var(--content-width);
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 60px;
-  align-items: center;
-  padding: 0 24px;
-}
-.hero-title {
-  font-family: var(--font-heading);
-  font-size: 74px;
-  font-weight: 600;
-  line-height: 1.1;
-  color: var(--text-primary);
-  margin-bottom: 24px;
-}
-.hero-desc {
-  font-family: var(--font-body);
-  font-size: 20px;
-  line-height: 1.5;
-  color: var(--text-secondary);
-  margin-bottom: 32px;
-}
-.hero-actions { display: flex; gap: 16px; }
-.btn-primary {
-  padding: 14px 32px;
-  background: var(--accent);
-  color: #fff;
-  border: none;
-  font-family: var(--font-mono);
-  font-size: 14px;
-  font-weight: 500;
-  cursor: pointer;
-  transition: opacity .15s;
-}
-.btn-primary:hover { opacity: .85; }
-.btn-secondary {
-  padding: 14px 32px;
-  background: transparent;
-  color: var(--accent);
-  border: 1px solid var(--accent);
-  font-family: var(--font-mono);
-  font-size: 14px;
-  font-weight: 500;
-  cursor: pointer;
-  transition: all .15s;
-}
-.btn-secondary:hover { background: rgba(255,132,0,0.1); }
-.hero-image {
-  width: 100%;
-  aspect-ratio: 520/640;
-  background: linear-gradient(135deg, #2A251E, #1A1814);
-  border-radius: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: var(--font-mono);
-  font-size: 14px;
-  color: var(--text-muted);
-}
+/* Sections */
+.section { padding:0; }
+.section-inner { max-width:var(--content-width); margin:0 auto; padding:0 24px; }
 
-/* ─── Section Common ─── */
-.section { padding: 80px 0; }
-.section-inner {
-  max-width: var(--content-width);
-  margin: 0 auto;
-  padding: 0 24px;
-}
+/* Why */
+.why { background:var(--bg-secondary); padding:80px 0; }
+.why-header { display:flex; align-items:flex-end; gap:32px; margin-bottom:40px; }
+.why-title { font-family:var(--font-heading); font-size:83px; font-weight:700; line-height:1.05; color:var(--text-secondary); white-space:pre-line; }
+.why-line { width:317px; height:3px; background:var(--accent); flex-shrink:0; margin-bottom:12px; }
+.benefits-grid-row { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin-bottom:16px; }
+.benefits-grid-row.row-2 { grid-template-columns:repeat(2,1fr); }
+.benefit-card { background:var(--bg-primary); display:flex; flex-direction:column; overflow:hidden; }
+.benefit-img { width:100%; height:240px; background:linear-gradient(135deg,#2A251E,#1A1814); display:flex; align-items:center; justify-content:center; color:var(--text-muted); font-size:11px; }
+.benefit-text { padding:20px; }
+.benefit-desc { font-size:16px; font-weight:600; line-height:1.4; color:var(--text-secondary); }
 
-/* ─── Why Work With Us ─── */
-.why { background: var(--bg-secondary); }
-.why-header {
-  display: flex;
-  align-items: flex-end;
-  gap: 32px;
-  margin-bottom: 48px;
-}
-.why-title {
-  font-family: var(--font-heading);
-  font-size: 83px;
-  font-weight: 600;
-  line-height: 1.05;
-  color: var(--text-secondary);
-  max-width: 800px;
-}
-.why-line {
-  width: 317px;
-  height: 3px;
-  background: var(--accent);
-  flex-shrink: 0;
-  margin-bottom: 16px;
-}
-.benefits-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
-  margin-bottom: 16px;
-}
-.benefit-card {
-  background: var(--bg-primary);
-  padding: 32px;
-  min-height: 420px;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-.benefit-number {
-  font-family: var(--font-heading);
-  font-size: 120px;
-  font-weight: 600;
-  color: rgba(255,132,0,0.15);
-  line-height: 1;
-}
-.benefit-title {
-  font-family: var(--font-heading);
-  font-size: 28px;
-  font-weight: 500;
-  color: var(--text-primary);
-}
-.benefit-desc {
-  font-size: 15px;
-  line-height: 1.6;
-  color: var(--text-muted);
-}
+/* White divider */
+.divider { width:100%; height:3px; background:#fff; border:none; margin:0; }
 
-/* ─── Categories ─── */
-.categories { background: var(--bg-primary); }
-.section-title {
-  font-family: var(--font-heading);
-  font-size: 83px;
-  font-weight: 600;
-  line-height: 1.05;
-  color: var(--text-secondary);
-  margin-bottom: 16px;
-}
-.section-line {
-  width: 317px;
-  height: 3px;
-  background: var(--accent);
-  margin-bottom: 48px;
-}
-.cat-block {
-  margin-bottom: 60px;
-}
-.cat-block-title {
-  font-family: var(--font-heading);
-  font-size: 54px;
-  font-weight: 500;
-  color: var(--text-primary);
-  margin-bottom: 8px;
-}
-.cat-block-title.dark { color: #0d0d0b; }
-.cat-block-desc {
-  font-size: 17px;
-  line-height: 1.5;
-  color: var(--text-secondary);
-  margin-bottom: 24px;
-}
-.cat-block-desc.dark { color: #0d0d0b; }
-.directions-row {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
-  margin-bottom: 24px;
-}
-.direction-card {
-  padding: 24px;
-  border: 1px solid rgba(255,255,255,0.08);
-  min-height: 80px;
-  display: flex;
-  align-items: center;
-  font-family: var(--font-body);
-  font-size: 15px;
-  color: var(--text-secondary);
-}
-.direction-card.dark { background: var(--bg-secondary); border-color: transparent; }
-.specialized-grid {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 12px;
-  margin-bottom: 24px;
-}
-.specialized-card {
-  background: var(--bg-secondary);
-  padding: 20px;
-  min-height: 120px;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-.specialized-card-icon {
-  width: 32px;
-  height: 32px;
-  background: var(--accent);
-  border-radius: 4px;
-}
-.specialized-card-title {
-  font-size: 13px;
-  line-height: 1.4;
-  color: var(--text-secondary);
-}
+/* Sections inner */
+.sec-pad { padding:80px 0; }
 
-/* ─── Benefits ─── */
-.benefits-light { background: var(--bg-white); }
-.benefits-light .benefits-inner {
-  max-width: var(--content-width);
-  margin: 0 auto;
-  padding: 0 24px;
-  display: grid;
-  grid-template-columns: 356px 1fr;
-  gap: 60px;
-}
-.benefits-light .section-title {
-  font-size: 54px;
-  color: #141413;
-}
-.benefits-light .section-line { margin-bottom: 0; }
-.benefits-light .cat-block-desc { color: #6F6B60; }
-.benefits-grid-2 {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
-}
-.benefit-number-card {
-  text-align: center;
-  padding: 40px 20px;
-}
-.benefit-number-card .number {
-  font-family: var(--font-heading);
-  font-size: 64px;
-  font-weight: 600;
-  color: var(--accent);
-  line-height: 1;
-  margin-bottom: 8px;
-}
-.benefit-number-card .label {
-  font-size: 15px;
-  color: #6F6B60;
-  line-height: 1.4;
-}
+/* Categories common */
+.cat-header { display:flex; flex-direction:column; gap:12px; margin-bottom:60px; }
+.section-title-lg { font-family:var(--font-heading); font-size:83px; font-weight:700; color:var(--text-secondary); line-height:1.05; }
+.section-title-mid { font-family:var(--font-heading); font-size:54px; font-weight:700; color:var(--text-primary); line-height:1.05; }
+.accent-line { width:317px; height:3px; background:var(--accent); }
+.sub-text { font-size:17px; font-weight:500; color:var(--text-secondary); line-height:1.4; }
 
-/* ─── CTA ─── */
-.cta { background: var(--bg-secondary); }
-.cta-inner {
-  max-width: var(--content-width);
-  margin: 0 auto;
-  padding: 0 24px;
-  background: linear-gradient(135deg, #15130F, #2A251E);
-  display: grid;
-  grid-template-columns: 520px 1fr;
-  gap: 60px;
-  align-items: start;
-  border-radius: 8px;
-  padding: 60px 24px;
-}
-.cta-title {
-  font-family: var(--font-heading);
-  font-size: 54px;
-  font-weight: 500;
-  color: var(--text-primary);
-  margin-bottom: 16px;
-}
-.cta-desc {
-  font-size: 17px;
-  line-height: 1.5;
-  color: var(--text-primary);
-  opacity: .8;
-}
-.form-group { margin-bottom: 16px; }
-.form-input {
-  width: 100%;
-  padding: 16px 20px;
-  background: #fff;
-  border: none;
-  font-family: var(--font-body);
-  font-size: 16px;
-  color: #141413;
-  outline: none;
-}
-.form-input::placeholder { color: #141413; opacity: .5; }
-.btn-submit {
-  width: 100%;
-  padding: 16px 32px;
-  background: var(--accent);
-  color: #fff;
-  border: none;
-  font-family: var(--font-mono);
-  font-size: 14px;
-  font-weight: 500;
-  cursor: pointer;
-  transition: opacity .15s;
-}
-.btn-submit:hover { opacity: .85; }
+/* Logo tape block */
+.logo-tape-block { margin-bottom:40px; }
+.print-types-row { display:grid; grid-template-columns:1fr 1fr; gap:24px; margin:24px 0; }
+.print-type-card { }
+.print-type-title { font-family:var(--font-heading); font-size:33px; font-weight:700; color:var(--text-primary); margin-bottom:8px; }
+.print-type-meta { font-size:16px; font-weight:600; color:var(--text-secondary); margin-bottom:12px; }
+.advantages-list { list-style:none; }
+.advantages-list li { font-size:15px; font-weight:500; color:var(--text-secondary); margin-bottom:6px; padding-left:16px; }
+.advantages-list li::before { content:"•"; color:var(--accent); margin-right:8px; }
 
-/* ─── Footer ─── */
-.footer { background: #050505; padding: 60px 0 0; }
-.footer-inner {
-  max-width: var(--content-width);
-  margin: 0 auto;
-  padding: 0 24px;
-}
-.footer-grid {
-  display: grid;
-  grid-template-columns: 2fr 1fr 1fr 1fr;
-  gap: 40px;
-  margin-bottom: 32px;
-}
-.footer-col h4 {
-  font-family: var(--font-mono);
-  font-size: 13px;
-  font-weight: 500;
-  color: var(--text-white);
-  margin-bottom: 16px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-.footer-col a {
-  display: block;
-  font-size: 14px;
-  color: var(--text-secondary);
-  text-decoration: none;
-  margin-bottom: 8px;
-  transition: color .15s;
-}
-.footer-col a:hover { color: var(--text-white); }
-.footer-links {
-  display: flex;
-  gap: 24px;
-  padding: 16px 0;
-  border-top: 1px solid rgba(255,255,255,0.06);
-}
-.footer-links a {
-  font-size: 14px;
-  color: var(--text-secondary);
-  text-decoration: none;
-}
-.footer-copyright {
-  padding: 24px 0;
-  border-top: 1px solid rgba(255,255,255,0.06);
-  font-size: 13px;
-  color: var(--text-secondary);
-}
+/* Packaging tape white block */
+.packaging-block { background:var(--bg-white); padding:40px 24px; border-radius:4px; margin-bottom:40px; }
+.packaging-block .section-title-mid { color:#0d0d0b; }
+.packaging-block .sub-text { color:#0d0d0b; }
+.tape-directions-row { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; margin:24px 0; }
+.tape-dir-title { font-family:var(--font-heading); font-size:33px; font-weight:700; color:#141413; margin-bottom:8px; }
+.tape-dir-text { font-size:15px; font-weight:500; color:#6F6B60; line-height:1.5; margin-bottom:12px; }
+.btn-details { padding:8px 16px; background:var(--accent); color:#fff; border:none; font-family:var(--font-mono); font-size:15px; font-weight:700; cursor:pointer; transition:opacity .15s; }
+.btn-details:hover { opacity:.85; }
 
-/* ─── Decorative Slashes ─── */
-.slash {
-  position: absolute;
-  width: 260px;
-  height: 16px;
-  border-radius: 8px;
-  pointer-events: none;
-}
+/* Specialized */
+.specialized-grid { display:grid; grid-template-columns:repeat(5,1fr); gap:16px; margin:24px 0; }
+.specialized-card { background:var(--bg-secondary); padding:20px; display:flex; flex-direction:column; gap:12px; }
+.spec-title { font-family:var(--font-heading); font-size:33px; font-weight:700; color:var(--text-primary); line-height:1.15; }
+.spec-desc { font-size:15px; font-weight:500; color:var(--text-secondary); line-height:1.4; margin-bottom:8px; }
 
-/* ─── Responsive ─── */
-@media (max-width: 1024px) {
-  .hero-inner { grid-template-columns: 1fr; }
-  .benefits-light .benefits-inner { grid-template-columns: 1fr; }
-  .cta-inner { grid-template-columns: 1fr; }
-  .footer-grid { grid-template-columns: 1fr 1fr; }
-  .why-title { font-size: 48px; }
-  .section-title { font-size: 48px; }
-}
-@media (max-width: 768px) {
-  .benefits-grid, .benefits-grid-2, .directions-row { grid-template-columns: 1fr; }
-  .specialized-grid { grid-template-columns: 1fr 1fr; }
-  .nav { display: none; }
-  .footer-grid { grid-template-columns: 1fr; }
-  .hero-title { font-size: 42px; }
-}
+/* Benefits light */
+.benefits-light { background:#fff; }
+.benefits-light-inner { max-width:var(--content-width); margin:0 auto; padding:80px 24px; display:grid; grid-template-columns:356px 1fr; gap:60px; }
+.benefits-light .section-title-mid { color:#141413; }
+.benefits-light .sub-text { color:#6F6B60; }
+.benefit-grid-3 { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin-bottom:16px; }
+.benefit-grid-31 { grid-template-columns:repeat(3,1fr); }
+.benefit-grid-32 { grid-template-columns:repeat(3,1fr); }
+.benefit-card-sm { padding:20px; border:1px solid rgba(0,0,0,0.04); }
+.benefit-card-sm .num { font-size:54px; font-weight:700; color:var(--accent); font-family:var(--font-heading); line-height:1; margin-bottom:4px; }
+.benefit-card-sm .title { font-size:19px; font-weight:700; color:#141413; margin-bottom:4px; }
+.benefit-card-sm .desc { font-size:14px; color:#6F6B60; line-height:1.4; }
+
+/* CTA */
+.cta { background:var(--bg-secondary); }
+.cta-inner { max-width:var(--content-width); margin:0 auto; padding:80px 24px; display:grid; grid-template-columns:520px 1fr; gap:60px; align-items:start; }
+.cta .section-title-mid { color:var(--text-primary); margin-bottom:8px; }
+.cta .sub-text { color:var(--text-primary); }
+.form-group { margin-bottom:12px; }
+.form-input { width:100%; padding:16px 20px; background:#fff; border:none; font-family:var(--font-body); font-size:16px; color:#141413; outline:none; }
+.form-input::placeholder { color:#141413; opacity:.5; }
+.btn-submit { width:100%; padding:14px 24px; background:var(--accent); color:#fff; border:none; font-family:var(--font-mono); font-size:16px; font-weight:700; cursor:pointer; transition:opacity .15s; }
+.btn-submit:hover { opacity:.85; }
+
+/* Footer */
+.footer { background:#050505; padding:60px 0 0; }
+.footer-inner { max-width:var(--content-width); margin:0 auto; padding:0 24px; }
+.footer-grid { display:grid; grid-template-columns:1fr 1fr 1fr 1fr; gap:40px; margin-bottom:32px; }
+.footer-col a { display:block; font-size:16px; color:var(--text-secondary); text-decoration:none; margin-bottom:8px; font-weight:400; transition:color .15s; }
+.footer-col a:hover { color:#fff; }
+.footer-legal { display:flex; gap:24px; padding:16px 0; border-top:1px solid rgba(255,255,255,0.06); }
+.footer-legal a { font-size:14px; color:var(--text-secondary); text-decoration:none; }
+.footer-copy { display:flex; justify-content:center; padding:24px 0; border-top:1px solid rgba(255,255,255,0.06); font-size:13px; color:var(--text-secondary); }
 </style>
 </head>
 <body>
 
-<!-- ═══ Хедер ═══ -->
+<!-- HEADER -->
 <header class="header">
   <div class="header-inner">
-    <div class="header-logo">НЬЮМАРК</div>
+    <div class="header-logo"><img src="/img/logo-clean-flat.png" alt="НЬЮМАРК"></div>
     <nav class="nav">
       <a href="#">О компании</a>
       <a href="#" class="active">Каталог</a>
@@ -494,234 +156,152 @@ body {
       <a href="#">Контакты</a>
     </nav>
     <div class="header-actions">
-      <div class="social-icon">TG</div>
-      <div class="social-icon">MAX</div>
-      <button class="btn-callback">Заказать звонок</button>
+      <div class="social-icon" style="font-size:20px">📱</div>
+      <div class="social-icon" style="font-family:var(--font-mono);font-size:10px;font-weight:700;color:#0D0D0B">MAX</div>
+      <button class="btn-callback">Обратный звонок</button>
     </div>
   </div>
 </header>
 
-<!-- ═══ Hero ═══ -->
+<!-- HERO -->
 <section class="hero">
   <div class="hero-inner">
     <div>
-      <h1 class="hero-title">Клейкая лента<br>и аксессуары<br>для упаковки<br>вашего бизнеса</h1>
-      <p class="hero-desc">Подберём ленту под коробки, паллеты, маркировку и ежедневную упаковку.</p>
+      <h1 class="hero-title">Клейкая лента 
+и аксессуары 
+для упаковки вашего бизнеса</h1>
+      <p class="hero-desc">Подберём ленту под коробки, паллеты, маркировку и ежедневную упаковку. В каталоге — брендированный скотч, стрейч-плёнка, малярные и специальные ленты, диспенсеры и сопутствующие товары.</p>
       <div class="hero-actions">
-        <button class="btn-primary">В каталог</button>
-        <button class="btn-secondary">Подбор по параметрам</button>
+        <button class="btn-primary">Перейти в каталог</button>
+        <button class="btn-secondary">Оставить заявку</button>
       </div>
     </div>
-    <div class="hero-image">
-      <span>📦 Тара, диспенсеры, коробки</span>
-    </div>
+    <div class="hero-image"></div>
   </div>
 </section>
 
-<!-- ═══ Why Work With Us ═══ -->
-<section class="section why">
+<!-- WHY -->
+<section class="why">
   <div class="section-inner">
     <div class="why-header">
-      <h2 class="why-title">Почему сотрудничать<br>с нами выгодно?</h2>
+      <h2 class="why-title">Почему сотрудничать 
+с нами выгодно ?</h2>
       <div class="why-line"></div>
     </div>
-    <div class="benefits-grid">
+    <div class="benefits-grid-row">
       <div class="benefit-card">
-        <div class="benefit-number">01</div>
-        <div class="benefit-title">Собственное производство</div>
-        <div class="benefit-desc">Контролируем качество на каждом этапе. Работаем с 2003 года.</div>
+        <div class="benefit-img">📦 Производство</div>
+        <div class="benefit-text"><div class="benefit-desc">Собственное Производство! Заключая контракт с нами, Вы получаете прямой контракт с ПРОИЗВОДИТЕЛЕМ</div></div>
       </div>
       <div class="benefit-card">
-        <div class="benefit-number">02</div>
-        <div class="benefit-title">Бесплатная разработка макета</div>
-        <div class="benefit-desc">Нанесём логотип в 1–3 цвета. Изготовим клише бесплатно.</div>
+        <div class="benefit-img">🚚 Доставка</div>
+        <div class="benefit-text"><div class="benefit-desc">Мы осуществляем прямые поставки транспортными компаниями в любой город России, из: Саранска, Москвы, Санкт-Петербурга, Перми!</div></div>
       </div>
       <div class="benefit-card">
-        <div class="benefit-number">03</div>
-        <div class="benefit-title">Отгрузка от 108 роликов</div>
-        <div class="benefit-desc">Минимальная партия для одноцветной печати — от 108 роликов.</div>
+        <div class="benefit-img">📋 Параметры</div>
+        <div class="benefit-text"><div class="benefit-desc">Вы получаете заявленные параметры упаковочных лент, а также соответствие длин намоток</div></div>
       </div>
     </div>
-    <div class="benefits-grid">
+    <div class="benefits-grid-row row-2" style="max-width:66%">
       <div class="benefit-card">
-        <div class="benefit-number">04</div>
-        <div class="benefit-title">Склады в 3 городах</div>
-        <div class="benefit-desc">Москва, Санкт-Петербург, Саранск. Отгрузка в день заказа.</div>
+        <div class="benefit-img">🛡️ Гарантия</div>
+        <div class="benefit-text"><div class="benefit-desc">Мы гарантируем возврат денег в случае если «вдруг» Вы сможете обнаружить какую-либо недостачу</div></div>
       </div>
       <div class="benefit-card">
-        <div class="benefit-number">05</div>
-        <div class="benefit-title">Итальянское оборудование</div>
-        <div class="benefit-desc">Высокоскоростные линии для ПП-ленты 5–19 мм.</div>
+        <div class="benefit-img">💰 Цены</div>
+        <div class="benefit-text"><div class="benefit-desc">Наши цены ниже относительно цен компаний-перепродавцов, присутствующих на рынке</div></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ═══ Categories ═══ -->
-<section class="section categories">
-  <div class="section-inner">
-    <div class="cat-header" style="margin-bottom:48px">
-      <h2 class="section-title">Что мы предлагаем</h2>
-      <div class="section-line"></div>
-    </div>
-
-    <!-- Logo tape -->
-    <div class="cat-block">
-      <h3 class="cat-block-title">Клейкая лента с логотипом</h3>
-      <p class="cat-block-desc">Наносим логотип в 1–3 цвета флексографическим способом. Бесплатно разработаем макет и изготовим клише.</p>
-      <div class="directions-row">
-        <div class="direction-card">1 цвет печати — от 56 руб.</div>
-        <div class="direction-card">2 цвета печати — от 58,70 руб.</div>
-        <div class="direction-card">3 цвета печати — от 67,50 руб.</div>
-      </div>
-      <button class="btn-primary">Перейти в раздел каталога</button>
-    </div>
-
-    <!-- Packaging tape -->
-    <div class="cat-block" style="background:#fff;padding:40px;border-radius:8px">
-      <h3 class="cat-block-title dark">Упаковочная лента</h3>
-      <p class="cat-block-desc dark">Разные клейкие свойства под самые разные задачи. Наши менеджеры помогут с выбором.</p>
-      <div class="directions-row">
-        <div class="direction-card dark">Стрейч пленка</div>
-        <div class="direction-card dark">Малярная лента</div>
-        <div class="direction-card dark">Спец. ленты</div>
-      </div>
-      <button class="btn-primary">Перейти в раздел каталога</button>
-    </div>
-
-    <!-- Specialized tapes -->
-    <div class="cat-block">
-      <h3 class="cat-block-title">Узкоспециализированные ленты</h3>
-      <p class="cat-block-desc">Подбираем ленты для производственных, монтажных, маркировочных и складских сценариев.</p>
-      <div class="specialized-grid">
-        <div class="specialized-card">
-          <div class="specialized-card-icon"></div>
-          <div class="specialized-card-title">Термостойкая малярная лента (термокрепп)</div>
-        </div>
-        <div class="specialized-card">
-          <div class="specialized-card-icon"></div>
-          <div class="specialized-card-title">ТПЛ</div>
-        </div>
-        <div class="specialized-card">
-          <div class="specialized-card-icon"></div>
-          <div class="specialized-card-title">Изоляционная лента</div>
-        </div>
-        <div class="specialized-card">
-          <div class="specialized-card-icon"></div>
-          <div class="specialized-card-title">Ленты с нанесением «осторожно хрупкое»</div>
-        </div>
-        <div class="specialized-card">
-          <div class="specialized-card-icon"></div>
-          <div class="specialized-card-title">Сигнальные ленты</div>
-        </div>
-      </div>
-      <button class="btn-primary">Перейти в раздел каталога</button>
-    </div>
-  </div>
-</section>
-
-<!-- ═══ Benefits (light) ═══ -->
-<section class="section benefits-light">
-  <div class="benefits-inner">
+<!-- BENEFITS LIGHT -->
+<section class="benefits-light">
+  <div class="benefits-light-inner">
     <div>
-      <h2 class="section-title">Преимущества, которые работают</h2>
-      <div class="section-line"></div>
-      <p class="cat-block-desc" style="margin-top:16px">Сделали блок похожим на навигационную карту: крупные номера помогают быстро считать выгоду.</p>
+      <h3 class="section-title-mid">Преимущества, которые работают</h3>
+      <div class="accent-line" style="margin-top:12px"></div>
+      <div class="sub-text" style="margin-top:16px">Сделали блок похожим на навигационную карту: крупные номера помогают быстро считать сильные стороны, а карточки разного размера добавляют динамику.</div>
     </div>
     <div>
-      <div class="benefits-grid-2">
-        <div class="benefit-number-card">
-          <div class="number">200+</div>
-          <div class="label">видов лент в наличии</div>
+      <div class="benefit-grid-3">
+        <div class="benefit-card-sm">
+          <div class="title">Подбор под задачу</div>
+          <div class="desc">Выбираем ленту под короб, вес, температуру и сценарий хранения.</div>
         </div>
-        <div class="benefit-number-card">
-          <div class="number">14</div>
-          <div class="label">дней — срок производства</div>
+        <div class="benefit-card-sm">
+          <div class="title">Офис и склад</div>
+          <div class="desc">В одном заказе закрываем упаковку, маркировку и расходники.</div>
         </div>
-        <div class="benefit-number-card">
-          <div class="number">3</div>
-          <div class="label">города со складами</div>
+        <div class="benefit-card-sm">
+          <div class="title">Оптовые поставки</div>
+          <div class="desc">Ассортимент и условия рассчитаны на регулярные закупки.</div>
         </div>
       </div>
-      <div class="benefits-grid-2" style="margin-top:16px">
-        <div class="benefit-number-card">
-          <div class="number">2003</div>
-          <div class="label">год основания</div>
+      <div class="benefit-grid-3">
+        <div class="benefit-card-sm">
+          <div class="title">Быстрая доставка</div>
+          <div class="desc">Ходовые позиции отправляем без лишних согласований.</div>
         </div>
-        <div class="benefit-number-card">
-          <div class="number">100%</div>
-          <div class="label">бесплатных образцов</div>
+        <div class="benefit-card-sm">
+          <div class="title">Аксессуары</div>
+          <div class="desc">Диспенсеры, стретч и специальные ленты совместимы между собой.</div>
         </div>
-        <div class="benefit-number-card">
-          <div class="number">50+</div>
-          <div class="label">городов доставки</div>
+        <div class="benefit-card-sm">
+          <div class="title">Надёжная упаковка</div>
+          <div class="desc">Помогаем собрать решение, которое держит груз и экономит время.</div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ═══ CTA ═══ -->
-<section class="section cta">
+<!-- CTA -->
+<section class="cta">
   <div class="cta-inner">
     <div>
-      <h2 class="cta-title">Остались вопросы?</h2>
-      <p class="cta-desc">Оставьте контакты и коротко опишите задачу: упаковка заказов, паллетирование, резка, брендирование — подберём решение за 1 день.</p>
+      <h3 class="section-title-mid">Остались вопросы? </h3>
+      <div class="sub-text">Оставьте контакты и коротко опишите задачу: упаковка заказов, паллетирование, ремонт, маркировка или брендирование.</div>
     </div>
     <div>
-      <div class="form-group">
-        <input class="form-input" type="text" placeholder="Имя">
-      </div>
-      <div class="form-group">
-        <input class="form-input" type="text" placeholder="Телефон или email">
-      </div>
-      <div class="form-group">
-        <input class="form-input" type="text" placeholder="Тип задачи">
-      </div>
+      <div class="form-group"><input class="form-input" type="text" placeholder="Имя"></div>
+      <div class="form-group"><input class="form-input" type="text" placeholder="Телефон или email"></div>
+      <div class="form-group"><input class="form-input" type="text" placeholder="Тип задачи"></div>
       <button class="btn-submit">Отправить заявку</button>
     </div>
   </div>
 </section>
 
-<!-- ═══ Footer ═══ -->
+<!-- FOOTER -->
 <footer class="footer">
   <div class="footer-inner">
     <div class="footer-grid">
+      <div class="footer-col"></div>
       <div class="footer-col">
-        <h4>НЬЮМАРК</h4>
-        <a href="#">Каталог клейких лент, стрейч-плёнки и упаковочных аксессуаров</a>
+        <a href="#">Каталог</a>
+        <a href="#">О компании</a>
+        <a href="#">Оплата и доставка</a>
+        <a href="#">Контакты</a>
       </div>
       <div class="footer-col">
-        <h4>Разделы</h4>
-        <a href="#">Клейкая лента</a>
-        <a href="#">Стреппинг-ленты</a>
-        <a href="#">Упаковочные инструменты</a>
-        <a href="#">Специальные ленты</a>
+        <a href="#">Самовывоз со склада</a>
+        <a href="#">Доставка по городу</a>
+        <a href="#">Транспортные компании</a>
       </div>
       <div class="footer-col">
-        <h4>Доставка</h4>
-        <a href="#">Москва</a>
-        <a href="#">Санкт-Петербург</a>
-        <a href="#">Саранск</a>
-      </div>
-      <div class="footer-col">
-        <h4>Контакты</h4>
-        <a href="#">+7 (495) 281-41-66</a>
-        <a href="#">info@newmark.ru</a>
-        <a href="#">Заказать звонок</a>
-        <a href="#">Реквизиты</a>
+        <a href="#">+7 (000) 000-00-00</a>
+        <a href="#">sales@lenta.pro</a>
+        <a href="#">Пн–Пт 9:00–18:00</a>
       </div>
     </div>
-    <div class="footer-links">
+    <div class="footer-legal">
       <a href="#">Реквизиты</a>
       <a href="#">Политика конфиденциальности</a>
       <a href="#">Условия продажи</a>
     </div>
-    <div class="footer-copyright">
-      © 2026, НЬЮМАРК — каталог клейких лент, стрейч-плёнки и упаковочных аксессуаров
-    </div>
+    <div class="footer-copy">© 2026, НЬЮМАРК — каталог клейких лент, стрейч-плёнки и упаковочных аксессуаров</div>
   </div>
-</section>
+</footer>
 
 </body>
 </html>
