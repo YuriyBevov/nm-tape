@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>НьюМарк — Клейкая лента и аксессуары для упаковки</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Oswald:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* ═══════════════════════════════════════════
+   Signal Noir — Design System
+   ═══════════════════════════════════════════ */
+:root {
+  --bg-primary: #0D0D0B;
+  --bg-secondary: #15130F;
+  --bg-white: #FFFFFF;
+  --accent: #FF8400;
+  --text-primary: #FFF4D6;
+  --text-secondary: #D9CDB2;
+  --text-white: #FFFFFF;
+  --text-dark: #141413;
+  --text-muted: #6F6B60;
+  --header-bg: rgba(255,255,255,0.6);
+  --font-heading: 'Oswald', sans-serif;
+  --font-body: 'IBM Plex Sans', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  --page-width: 1440px;
+  --content-width: 1280px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  overflow-x: hidden;
+}
+
+/* ─── Header ─── */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: rgba(255,255,255,0.6);
+  backdrop-filter: blur(12px);
+}
+.header-inner {
+  max-width: var(--content-width);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 24px;
+}
+.header-logo {
+  width: 128px;
+  height: 60px;
+  background: #0D0D0B;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-mono);
+  font-size: 14px;
+  font-weight: 500;
+  color: #fff;
+}
+.nav { display: flex; align-items: center; gap: 24px; }
+.nav a {
+  font-family: var(--font-mono);
+  font-size: 14px;
+  color: #fff;
+  text-decoration: none;
+  transition: opacity .15s;
+}
+.nav a:hover { opacity: .7; }
+.nav a.active { font-size: 16px; font-weight: 500; }
+.header-actions { display: flex; align-items: center; gap: 12px; }
+.social-icon {
+  width: 40px; height: 40px;
+  border-radius: 50%;
+  background: rgba(255,252,243,0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-family: var(--font-mono);
+  color: #0D0D0B;
+}
+.btn-callback {
+  padding: 12px 24px;
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  font-family: var(--font-mono);
+  font-size: 14px;
+  cursor: pointer;
+  transition: opacity .15s;
+}
+.btn-callback:hover { opacity: .85; }
+
+/* ─── Hero ─── */
+.hero {
+  min-height: 764px;
+  background: linear-gradient(180deg, #0D0D0B 0%, #1A1814 100%);
+  display: flex;
+  align-items: center;
+  padding-top: 84px;
+}
+.hero-inner {
+  max-width: var(--content-width);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+  padding: 0 24px;
+}
+.hero-title {
+  font-family: var(--font-heading);
+  font-size: 74px;
+  font-weight: 600;
+  line-height: 1.1;
+  color: var(--text-primary);
+  margin-bottom: 24px;
+}
+.hero-desc {
+  font-family: var(--font-body);
+  font-size: 20px;
+  line-height: 1.5;
+  color: var(--text-secondary);
+  margin-bottom: 32px;
+}
+.hero-actions { display: flex; gap: 16px; }
+.btn-primary {
+  padding: 14px 32px;
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  font-family: var(--font-mono);
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: opacity .15s;
+}
+.btn-primary:hover { opacity: .85; }
+.btn-secondary {
+  padding: 14px 32px;
+  background: transparent;
+  color: var(--accent);
+  border: 1px solid var(--accent);
+  font-family: var(--font-mono);
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all .15s;
+}
+.btn-secondary:hover { background: rgba(255,132,0,0.1); }
+.hero-image {
+  width: 100%;
+  aspect-ratio: 520/640;
+  background: linear-gradient(135deg, #2A251E, #1A1814);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-mono);
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+/* ─── Section Common ─── */
+.section { padding: 80px 0; }
+.section-inner {
+  max-width: var(--content-width);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ─── Why Work With Us ─── */
+.why { background: var(--bg-secondary); }
+.why-header {
+  display: flex;
+  align-items: flex-end;
+  gap: 32px;
+  margin-bottom: 48px;
+}
+.why-title {
+  font-family: var(--font-heading);
+  font-size: 83px;
+  font-weight: 600;
+  line-height: 1.05;
+  color: var(--text-secondary);
+  max-width: 800px;
+}
+.why-line {
+  width: 317px;
+  height: 3px;
+  background: var(--accent);
+  flex-shrink: 0;
+  margin-bottom: 16px;
+}
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-bottom: 16px;
+}
+.benefit-card {
+  background: var(--bg-primary);
+  padding: 32px;
+  min-height: 420px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.benefit-number {
+  font-family: var(--font-heading);
+  font-size: 120px;
+  font-weight: 600;
+  color: rgba(255,132,0,0.15);
+  line-height: 1;
+}
+.benefit-title {
+  font-family: var(--font-heading);
+  font-size: 28px;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+.benefit-desc {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--text-muted);
+}
+
+/* ─── Categories ─── */
+.categories { background: var(--bg-primary); }
+.section-title {
+  font-family: var(--font-heading);
+  font-size: 83px;
+  font-weight: 600;
+  line-height: 1.05;
+  color: var(--text-secondary);
+  margin-bottom: 16px;
+}
+.section-line {
+  width: 317px;
+  height: 3px;
+  background: var(--accent);
+  margin-bottom: 48px;
+}
+.cat-block {
+  margin-bottom: 60px;
+}
+.cat-block-title {
+  font-family: var(--font-heading);
+  font-size: 54px;
+  font-weight: 500;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+}
+.cat-block-title.dark { color: #0d0d0b; }
+.cat-block-desc {
+  font-size: 17px;
+  line-height: 1.5;
+  color: var(--text-secondary);
+  margin-bottom: 24px;
+}
+.cat-block-desc.dark { color: #0d0d0b; }
+.directions-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-bottom: 24px;
+}
+.direction-card {
+  padding: 24px;
+  border: 1px solid rgba(255,255,255,0.08);
+  min-height: 80px;
+  display: flex;
+  align-items: center;
+  font-family: var(--font-body);
+  font-size: 15px;
+  color: var(--text-secondary);
+}
+.direction-card.dark { background: var(--bg-secondary); border-color: transparent; }
+.specialized-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 12px;
+  margin-bottom: 24px;
+}
+.specialized-card {
+  background: var(--bg-secondary);
+  padding: 20px;
+  min-height: 120px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.specialized-card-icon {
+  width: 32px;
+  height: 32px;
+  background: var(--accent);
+  border-radius: 4px;
+}
+.specialized-card-title {
+  font-size: 13px;
+  line-height: 1.4;
+  color: var(--text-secondary);
+}
+
+/* ─── Benefits ─── */
+.benefits-light { background: var(--bg-white); }
+.benefits-light .benefits-inner {
+  max-width: var(--content-width);
+  margin: 0 auto;
+  padding: 0 24px;
+  display: grid;
+  grid-template-columns: 356px 1fr;
+  gap: 60px;
+}
+.benefits-light .section-title {
+  font-size: 54px;
+  color: #141413;
+}
+.benefits-light .section-line { margin-bottom: 0; }
+.benefits-light .cat-block-desc { color: #6F6B60; }
+.benefits-grid-2 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+.benefit-number-card {
+  text-align: center;
+  padding: 40px 20px;
+}
+.benefit-number-card .number {
+  font-family: var(--font-heading);
+  font-size: 64px;
+  font-weight: 600;
+  color: var(--accent);
+  line-height: 1;
+  margin-bottom: 8px;
+}
+.benefit-number-card .label {
+  font-size: 15px;
+  color: #6F6B60;
+  line-height: 1.4;
+}
+
+/* ─── CTA ─── */
+.cta { background: var(--bg-secondary); }
+.cta-inner {
+  max-width: var(--content-width);
+  margin: 0 auto;
+  padding: 0 24px;
+  background: linear-gradient(135deg, #15130F, #2A251E);
+  display: grid;
+  grid-template-columns: 520px 1fr;
+  gap: 60px;
+  align-items: start;
+  border-radius: 8px;
+  padding: 60px 24px;
+}
+.cta-title {
+  font-family: var(--font-heading);
+  font-size: 54px;
+  font-weight: 500;
+  color: var(--text-primary);
+  margin-bottom: 16px;
+}
+.cta-desc {
+  font-size: 17px;
+  line-height: 1.5;
+  color: var(--text-primary);
+  opacity: .8;
+}
+.form-group { margin-bottom: 16px; }
+.form-input {
+  width: 100%;
+  padding: 16px 20px;
+  background: #fff;
+  border: none;
+  font-family: var(--font-body);
+  font-size: 16px;
+  color: #141413;
+  outline: none;
+}
+.form-input::placeholder { color: #141413; opacity: .5; }
+.btn-submit {
+  width: 100%;
+  padding: 16px 32px;
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  font-family: var(--font-mono);
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: opacity .15s;
+}
+.btn-submit:hover { opacity: .85; }
+
+/* ─── Footer ─── */
+.footer { background: #050505; padding: 60px 0 0; }
+.footer-inner {
+  max-width: var(--content-width);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 32px;
+}
+.footer-col h4 {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-white);
+  margin-bottom: 16px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.footer-col a {
+  display: block;
+  font-size: 14px;
+  color: var(--text-secondary);
+  text-decoration: none;
+  margin-bottom: 8px;
+  transition: color .15s;
+}
+.footer-col a:hover { color: var(--text-white); }
+.footer-links {
+  display: flex;
+  gap: 24px;
+  padding: 16px 0;
+  border-top: 1px solid rgba(255,255,255,0.06);
+}
+.footer-links a {
+  font-size: 14px;
+  color: var(--text-secondary);
+  text-decoration: none;
+}
+.footer-copyright {
+  padding: 24px 0;
+  border-top: 1px solid rgba(255,255,255,0.06);
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+/* ─── Decorative Slashes ─── */
+.slash {
+  position: absolute;
+  width: 260px;
+  height: 16px;
+  border-radius: 8px;
+  pointer-events: none;
+}
+
+/* ─── Responsive ─── */
+@media (max-width: 1024px) {
+  .hero-inner { grid-template-columns: 1fr; }
+  .benefits-light .benefits-inner { grid-template-columns: 1fr; }
+  .cta-inner { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+  .why-title { font-size: 48px; }
+  .section-title { font-size: 48px; }
+}
+@media (max-width: 768px) {
+  .benefits-grid, .benefits-grid-2, .directions-row { grid-template-columns: 1fr; }
+  .specialized-grid { grid-template-columns: 1fr 1fr; }
+  .nav { display: none; }
+  .footer-grid { grid-template-columns: 1fr; }
+  .hero-title { font-size: 42px; }
+}
+</style>
+</head>
+<body>
+
+<!-- ═══ Хедер ═══ -->
+<header class="header">
+  <div class="header-inner">
+    <div class="header-logo">НЬЮМАРК</div>
+    <nav class="nav">
+      <a href="#">О компании</a>
+      <a href="#" class="active">Каталог</a>
+      <a href="#">Оплата и Доставка</a>
+      <a href="#">Контакты</a>
+    </nav>
+    <div class="header-actions">
+      <div class="social-icon">TG</div>
+      <div class="social-icon">MAX</div>
+      <button class="btn-callback">Заказать звонок</button>
+    </div>
+  </div>
+</header>
+
+<!-- ═══ Hero ═══ -->
+<section class="hero">
+  <div class="hero-inner">
+    <div>
+      <h1 class="hero-title">Клейкая лента<br>и аксессуары<br>для упаковки<br>вашего бизнеса</h1>
+      <p class="hero-desc">Подберём ленту под коробки, паллеты, маркировку и ежедневную упаковку.</p>
+      <div class="hero-actions">
+        <button class="btn-primary">В каталог</button>
+        <button class="btn-secondary">Подбор по параметрам</button>
+      </div>
+    </div>
+    <div class="hero-image">
+      <span>📦 Тара, диспенсеры, коробки</span>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ Why Work With Us ═══ -->
+<section class="section why">
+  <div class="section-inner">
+    <div class="why-header">
+      <h2 class="why-title">Почему сотрудничать<br>с нами выгодно?</h2>
+      <div class="why-line"></div>
+    </div>
+    <div class="benefits-grid">
+      <div class="benefit-card">
+        <div class="benefit-number">01</div>
+        <div class="benefit-title">Собственное производство</div>
+        <div class="benefit-desc">Контролируем качество на каждом этапе. Работаем с 2003 года.</div>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-number">02</div>
+        <div class="benefit-title">Бесплатная разработка макета</div>
+        <div class="benefit-desc">Нанесём логотип в 1–3 цвета. Изготовим клише бесплатно.</div>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-number">03</div>
+        <div class="benefit-title">Отгрузка от 108 роликов</div>
+        <div class="benefit-desc">Минимальная партия для одноцветной печати — от 108 роликов.</div>
+      </div>
+    </div>
+    <div class="benefits-grid">
+      <div class="benefit-card">
+        <div class="benefit-number">04</div>
+        <div class="benefit-title">Склады в 3 городах</div>
+        <div class="benefit-desc">Москва, Санкт-Петербург, Саранск. Отгрузка в день заказа.</div>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-number">05</div>
+        <div class="benefit-title">Итальянское оборудование</div>
+        <div class="benefit-desc">Высокоскоростные линии для ПП-ленты 5–19 мм.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ Categories ═══ -->
+<section class="section categories">
+  <div class="section-inner">
+    <div class="cat-header" style="margin-bottom:48px">
+      <h2 class="section-title">Что мы предлагаем</h2>
+      <div class="section-line"></div>
+    </div>
+
+    <!-- Logo tape -->
+    <div class="cat-block">
+      <h3 class="cat-block-title">Клейкая лента с логотипом</h3>
+      <p class="cat-block-desc">Наносим логотип в 1–3 цвета флексографическим способом. Бесплатно разработаем макет и изготовим клише.</p>
+      <div class="directions-row">
+        <div class="direction-card">1 цвет печати — от 56 руб.</div>
+        <div class="direction-card">2 цвета печати — от 58,70 руб.</div>
+        <div class="direction-card">3 цвета печати — от 67,50 руб.</div>
+      </div>
+      <button class="btn-primary">Перейти в раздел каталога</button>
+    </div>
+
+    <!-- Packaging tape -->
+    <div class="cat-block" style="background:#fff;padding:40px;border-radius:8px">
+      <h3 class="cat-block-title dark">Упаковочная лента</h3>
+      <p class="cat-block-desc dark">Разные клейкие свойства под самые разные задачи. Наши менеджеры помогут с выбором.</p>
+      <div class="directions-row">
+        <div class="direction-card dark">Стрейч пленка</div>
+        <div class="direction-card dark">Малярная лента</div>
+        <div class="direction-card dark">Спец. ленты</div>
+      </div>
+      <button class="btn-primary">Перейти в раздел каталога</button>
+    </div>
+
+    <!-- Specialized tapes -->
+    <div class="cat-block">
+      <h3 class="cat-block-title">Узкоспециализированные ленты</h3>
+      <p class="cat-block-desc">Подбираем ленты для производственных, монтажных, маркировочных и складских сценариев.</p>
+      <div class="specialized-grid">
+        <div class="specialized-card">
+          <div class="specialized-card-icon"></div>
+          <div class="specialized-card-title">Термостойкая малярная лента (термокрепп)</div>
+        </div>
+        <div class="specialized-card">
+          <div class="specialized-card-icon"></div>
+          <div class="specialized-card-title">ТПЛ</div>
+        </div>
+        <div class="specialized-card">
+          <div class="specialized-card-icon"></div>
+          <div class="specialized-card-title">Изоляционная лента</div>
+        </div>
+        <div class="specialized-card">
+          <div class="specialized-card-icon"></div>
+          <div class="specialized-card-title">Ленты с нанесением «осторожно хрупкое»</div>
+        </div>
+        <div class="specialized-card">
+          <div class="specialized-card-icon"></div>
+          <div class="specialized-card-title">Сигнальные ленты</div>
+        </div>
+      </div>
+      <button class="btn-primary">Перейти в раздел каталога</button>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ Benefits (light) ═══ -->
+<section class="section benefits-light">
+  <div class="benefits-inner">
+    <div>
+      <h2 class="section-title">Преимущества, которые работают</h2>
+      <div class="section-line"></div>
+      <p class="cat-block-desc" style="margin-top:16px">Сделали блок похожим на навигационную карту: крупные номера помогают быстро считать выгоду.</p>
+    </div>
+    <div>
+      <div class="benefits-grid-2">
+        <div class="benefit-number-card">
+          <div class="number">200+</div>
+          <div class="label">видов лент в наличии</div>
+        </div>
+        <div class="benefit-number-card">
+          <div class="number">14</div>
+          <div class="label">дней — срок производства</div>
+        </div>
+        <div class="benefit-number-card">
+          <div class="number">3</div>
+          <div class="label">города со складами</div>
+        </div>
+      </div>
+      <div class="benefits-grid-2" style="margin-top:16px">
+        <div class="benefit-number-card">
+          <div class="number">2003</div>
+          <div class="label">год основания</div>
+        </div>
+        <div class="benefit-number-card">
+          <div class="number">100%</div>
+          <div class="label">бесплатных образцов</div>
+        </div>
+        <div class="benefit-number-card">
+          <div class="number">50+</div>
+          <div class="label">городов доставки</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CTA ═══ -->
+<section class="section cta">
+  <div class="cta-inner">
+    <div>
+      <h2 class="cta-title">Остались вопросы?</h2>
+      <p class="cta-desc">Оставьте контакты и коротко опишите задачу: упаковка заказов, паллетирование, резка, брендирование — подберём решение за 1 день.</p>
+    </div>
+    <div>
+      <div class="form-group">
+        <input class="form-input" type="text" placeholder="Имя">
+      </div>
+      <div class="form-group">
+        <input class="form-input" type="text" placeholder="Телефон или email">
+      </div>
+      <div class="form-group">
+        <input class="form-input" type="text" placeholder="Тип задачи">
+      </div>
+      <button class="btn-submit">Отправить заявку</button>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ Footer ═══ -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h4>НЬЮМАРК</h4>
+        <a href="#">Каталог клейких лент, стрейч-плёнки и упаковочных аксессуаров</a>
+      </div>
+      <div class="footer-col">
+        <h4>Разделы</h4>
+        <a href="#">Клейкая лента</a>
+        <a href="#">Стреппинг-ленты</a>
+        <a href="#">Упаковочные инструменты</a>
+        <a href="#">Специальные ленты</a>
+      </div>
+      <div class="footer-col">
+        <h4>Доставка</h4>
+        <a href="#">Москва</a>
+        <a href="#">Санкт-Петербург</a>
+        <a href="#">Саранск</a>
+      </div>
+      <div class="footer-col">
+        <h4>Контакты</h4>
+        <a href="#">+7 (495) 281-41-66</a>
+        <a href="#">info@newmark.ru</a>
+        <a href="#">Заказать звонок</a>
+        <a href="#">Реквизиты</a>
+      </div>
+    </div>
+    <div class="footer-links">
+      <a href="#">Реквизиты</a>
+      <a href="#">Политика конфиденциальности</a>
+      <a href="#">Условия продажи</a>
+    </div>
+    <div class="footer-copyright">
+      © 2026, НЬЮМАРК — каталог клейких лент, стрейч-плёнки и упаковочных аксессуаров
+    </div>
+  </div>
+</section>
+
+</body>
+</html>
